@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+
+\bibitem{Lorensen:1987:MCA}
+W.~E. Lorensen and H.~E. Cline.
+\newblock Marching cubes: A high resolution 3d surface construction algorithm.
+\newblock In {\em Computer Graphics (Proceedings of SIGGRAPH 87)}, volume~21,
+  pages 163--169, July 1987.
+
+\bibitem{Nielson:1991:TAD}
+G.~M. Nielson and B.~Hamann.
+\newblock The asymptotic decider: Removing the ambiguity in marching cubes.
+\newblock In {\em Visualization '91}, pages 83--91, 1991.
+
+\end{thebibliography}
