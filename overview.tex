@@ -1,1 +1,15 @@
 \section{Overview}
+
+\ifx
+\begin{figure*}[htb]
+\centering
+\includegraphics{images/Pipeline.eps}
+\caption{Sample illustration.}
+\end{figure*}
+\else
+\begin{figure*}[htbp]
+\centering
+  \includegraphics[width=1\linewidth]{images/Pipeline.eps}% 1\linewidth
+  \caption{The overview of delivery system.}\label{fig.2}
+  \end{figure*}
+  \fi

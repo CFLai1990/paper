@@ -1,7 +1,21 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Related Work}{}% 2
-\BOOKMARK [1][-]{section.3}{Overview}{}% 3
-\BOOKMARK [1][-]{section.4}{Locally Optimized Viewpoint Selection}{}% 4
-\BOOKMARK [1][-]{section.5}{Case Study}{}% 5
-\BOOKMARK [1][-]{section.6}{Discussion}{}% 6
-\BOOKMARK [1][-]{section.7}{Conclusion}{}% 7
+\BOOKMARK [2][-]{subsection.2.1}{Dimension-Reduced Projection}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Projection Manipulation}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{High-dimensional Local Data Analysis}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Overview}{}% 6
+\BOOKMARK [1][-]{section.4}{High-dimensional Exploration via Locally Optimized Viewpoints}{}% 7
+\BOOKMARK [2][-]{subsection.4.1}{Find a Focus}{section.4}% 8
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Focus in Different Granularities}{subsection.4.1}% 9
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Distortion Hints}{subsection.4.1}% 10
+\BOOKMARK [3][-]{subsubsection.4.1.3}{Focus Suggestion}{subsection.4.1}% 11
+\BOOKMARK [2][-]{subsection.4.2}{Featured Viewpoints for the Focus}{section.4}% 12
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Desirable Local Features}{subsection.4.2}% 13
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Feature Enhanced Projections}{subsection.4.2}% 14
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Subspace Suggestion}{subsection.4.2}% 15
+\BOOKMARK [2][-]{subsection.4.3}{From Focus to Cluster}{section.4}% 16
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Focus Improvement}{subsection.4.3}% 17
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Cluster Comparison via Viewpoint Map}{subsection.4.3}% 18
+\BOOKMARK [1][-]{section.5}{Case Study}{}% 19
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 20
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 21

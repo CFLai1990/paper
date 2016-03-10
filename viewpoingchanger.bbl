@@ -1,3 +1,60 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{absil2004riemannian}
+P.-A. Absil, R.~Mahony, and R.~Sepulchre.
+\newblock Riemannian geometry of grassmann manifolds with a view on algorithmic
+  computation.
+\newblock {\em Acta Applicandae Mathematica}, 80(2):199--220, 2004.
+
+\bibitem{DBLP:journals/tvcg/ElmqvistDF08}
+N.~Elmqvist, P.~Dragicevic, and J.~Fekete.
+\newblock Rolling the dice: Multidimensional visual exploration using
+  scatterplot matrix navigation.
+\newblock {\em {IEEE} Trans. Vis. Comput. Graph.}, 14(6):1539--1148, 2008.
+
+\bibitem{DBLP:journals/tc/FriedmanT74}
+J.~H. Friedman and J.~W. Tukey.
+\newblock A projection pursuit algorithm for exploratory data analysis.
+\newblock {\em {IEEE} Trans. Computers}, 23(9):881--890, 1974.
+
+\bibitem{DBLP:journals/tvcg/HuBMHNL13}
+X.~Hu, L.~Bradel, D.~Maiti, L.~House, C.~North, and S.~Leman.
+\newblock Semantics of directly manipulating spatializations.
+\newblock {\em {IEEE} Trans. Vis. Comput. Graph.}, 19(12):2052--2059, 2013.
+
+\bibitem{jeong2009ipca}
+D.~H. Jeong, C.~Ziemkiewicz, B.~Fisher, W.~Ribarsky, and R.~Chang.
+\newblock ipca: An interactive system for pca-based visual analytics.
+\newblock In {\em Computer Graphics Forum}, volume~28, pages 767--774. Wiley
+  Online Library, 2009.
+
+\bibitem{DBLP:journals/tvcg/LehmannT13}
+D.~J. Lehmann and H.~Theisel.
+\newblock Orthographic star coordinates.
+\newblock {\em {IEEE} Trans. Vis. Comput. Graph.}, 19(12):2615--2624, 2013.
+
+\bibitem{DBLP:journals/tvcg/NamM13}
+J.~E. Nam and K.~Mueller.
+\newblock Tripadvisor\({}^{\mbox{n-d}}\): {A} tourism-inspired high-dimensional
+  space exploration framework with overview and detail.
+\newblock {\em {IEEE} Trans. Vis. Comput. Graph.}, 19(2):291--305, 2013.
+
+\bibitem{DBLP:journals/ivs/SeoS05}
+J.~Seo and B.~Shneiderman.
+\newblock A rank-by-feature framework for interactive exploration of
+  multidimensional data.
+\newblock {\em Information Visualization}, 4(2):96--113, 2005.
+
+\bibitem{DBLP:journals/cgf/SipsNLH09}
+M.~Sips, B.~Neubert, J.~P. Lewis, and P.~Hanrahan.
+\newblock Selecting good views of high-dimensional data using class
+  consistency.
+\newblock {\em Comput. Graph. Forum}, 28(3):831--838, 2009.
+
+\bibitem{DBLP:journals/tvcg/YuanRWG13}
+X.~Yuan, D.~Ren, Z.~Wang, and C.~Guo.
+\newblock Dimension projection matrix/tree: Interactive subspace visual
+  exploration and analysis of high dimensional data.
+\newblock {\em {IEEE} Trans. Vis. Comput. Graph.}, 19(12):2625--2633, 2013.
 
 \end{thebibliography}

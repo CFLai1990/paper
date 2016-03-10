@@ -50,7 +50,6 @@
   Pages                    = {1539--1148},
   Volume                   = {14},
 
-  __markedentry            = {[chufanlai:2]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tvcg/ElmqvistDF08},
   Doi                      = {10.1109/TVCG.2008.153},
@@ -69,7 +68,6 @@
   Pages                    = {881--890},
   Volume                   = {23},
 
-  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tc/FriedmanT74},
   Doi                      = {10.1109/T-C.1974.224051},
@@ -92,7 +90,7 @@
   Pages                    = {2052--2059},
   Volume                   = {19},
 
-  __markedentry            = {[chufanlai:2]},
+  __markedentry            = {[chufanlai:1]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tvcg/HuBMHNL13},
   Doi                      = {10.1109/TVCG.2013.188},
@@ -125,7 +123,7 @@
   Pages                    = {2615--2624},
   Volume                   = {19},
 
-  __markedentry            = {[chufanlai:2]},
+  __markedentry            = {[chufanlai:1]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tvcg/LehmannT13},
   Doi                      = {10.1109/TVCG.2013.182},
@@ -145,7 +143,7 @@
   Pages                    = {291--305},
   Volume                   = {19},
 
-  __markedentry            = {[chufanlai:2]},
+  __markedentry            = {[chufanlai:1]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tvcg/NamM13},
   Doi                      = {10.1109/TVCG.2012.65},
@@ -165,7 +163,6 @@
   Pages                    = {96--113},
   Volume                   = {4},
 
-  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/ivs/SeoS05},
   Doi                      = {10.1057/palgrave.ivs.9500091},
@@ -186,7 +183,6 @@
   Pages                    = {831--838},
   Volume                   = {28},
 
-  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/cgf/SipsNLH09},
   Doi                      = {10.1111/j.1467-8659.2009.01467.x},
@@ -231,10 +227,7 @@
 0 AllEntriesGroup:;
 1 ExplicitGroup:Local Data Analysis\;0\;DBLP:journals/tvcg/YuanRWG13\;
 ;
-1 ExplicitGroup:Interactive Projection Analysis\;0\;DBLP:journals/tvcg
-/ElmqvistDF08\;DBLP:journals/tvcg/HuBMHNL13\;DBLP:journals/tvcg/Lehman
-nT13\;DBLP:journals/tvcg/NamM13\;;
-1 ExplicitGroup:Dimension-Reduced Projection\;0\;DBLP:journals/cgf/Sip
-sNLH09\;DBLP:journals/ivs/SeoS05\;DBLP:journals/tc/FriedmanT74\;;
+1 ExplicitGroup:Projection Manipulation\;0\;DBLP:journals/tvcg/Lehmann
+T13\;DBLP:journals/tvcg/NamM13\;;
 }
 
