@@ -3,46 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: viewpoingchanger.aux
 The style file: abbrv.bst
 Database file #1: viewpoingchanger.bib
-Warning--can't use both volume and number fields in jeong2009ipca
-You've used 10 entries,
+You've used 18 entries,
             2118 wiz_defined-function locations,
-            566 strings with 5810 characters,
-and the built_in function-call counts, 3970 in all, are:
-= -- 401
-> -- 195
-< -- 2
-+ -- 78
-- -- 66
-* -- 332
-:= -- 656
-add.period$ -- 31
-call.type$ -- 10
-change.case$ -- 63
+            616 strings with 7809 characters,
+and the built_in function-call counts, 7092 in all, are:
+= -- 707
+> -- 357
+< -- 3
++ -- 142
+- -- 122
+* -- 574
+:= -- 1168
+add.period$ -- 54
+call.type$ -- 18
+change.case$ -- 115
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 122
-empty$ -- 292
-format.name$ -- 66
-if$ -- 805
+cite$ -- 18
+duplicate$ -- 228
+empty$ -- 527
+format.name$ -- 122
+if$ -- 1445
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 10
-newline$ -- 53
-num.names$ -- 20
-pop$ -- 46
+int.to.str$ -- 18
+missing$ -- 18
+newline$ -- 93
+num.names$ -- 36
+pop$ -- 94
 preamble$ -- 1
-purify$ -- 53
+purify$ -- 97
 quote$ -- 0
-skip$ -- 85
+skip$ -- 160
 stack$ -- 0
-substring$ -- 330
-swap$ -- 22
-text.length$ -- 2
+substring$ -- 563
+swap$ -- 42
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 40
-warning$ -- 1
-while$ -- 41
-width$ -- 12
-write$ -- 114
-(There was 1 warning)
+type$ -- 72
+warning$ -- 0
+while$ -- 75
+width$ -- 20
+write$ -- 200

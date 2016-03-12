@@ -1,10 +1,10 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Related Work}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Dimension-Reduced Projection}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Projection Manipulation}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{High-dimensional Local Data Analysis}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Dimension-Driven Projection Exploration}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Data-Driven Projection Pursuit}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{High-Dimensional Local Data Analysis}{section.2}% 5
 \BOOKMARK [1][-]{section.3}{Overview}{}% 6
-\BOOKMARK [1][-]{section.4}{High-dimensional Exploration via Locally Optimized Viewpoints}{}% 7
+\BOOKMARK [1][-]{section.4}{High-Dimensional Exploration Through Locally Optimized Viewpoints}{}% 7
 \BOOKMARK [2][-]{subsection.4.1}{Find a Focus}{section.4}% 8
 \BOOKMARK [3][-]{subsubsection.4.1.1}{Focus in Different Granularities}{subsection.4.1}% 9
 \BOOKMARK [3][-]{subsubsection.4.1.2}{Distortion Hints}{subsection.4.1}% 10

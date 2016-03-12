@@ -1,37 +1,81 @@
 \begin{thebibliography}{10}
 
-\bibitem{absil2004riemannian}
-P.-A. Absil, R.~Mahony, and R.~Sepulchre.
-\newblock Riemannian geometry of grassmann manifolds with a view on algorithmic
-  computation.
-\newblock {\em Acta Applicandae Mathematica}, 80(2):199--220, 2004.
+\bibitem{DBLP:conf/ieeevast/BrownLBC12}
+E.~T. Brown, J.~Liu, C.~E. Brodley, and R.~Chang.
+\newblock Dis-function: Learning distance functions interactively.
+\newblock In {\em 2012 {IEEE} Conference on Visual Analytics Science and
+  Technology, {VAST} 2012, Seattle, WA, USA, October 14-19, 2012}, pages
+  83--92, 2012.
 
-\bibitem{DBLP:journals/tvcg/ElmqvistDF08}
-N.~Elmqvist, P.~Dragicevic, and J.~Fekete.
-\newblock Rolling the dice: Multidimensional visual exploration using
-  scatterplot matrix navigation.
-\newblock {\em {IEEE} Trans. Vis. Comput. Graph.}, 14(6):1539--1148, 2008.
+\bibitem{DBLP:conf/ieeevast/ChooLKP10}
+J.~Choo, H.~Lee, J.~Kihm, and H.~Park.
+\newblock ivisclassifier: An interactive visual analytics system for
+  classification based on supervised dimension reduction.
+\newblock In {\em Proceedings of the {IEEE} Conference on Visual Analytics
+  Science and Technology, {IEEE} {VAST} 2010, Salt Lake City, Utah, USA, 24-29
+  October 2010, part of VisWeek 2010}, pages 27--34, 2010.
+
+\bibitem{cook1995grand}
+D.~Cook, A.~Buja, J.~Cabrera, and C.~Hurley.
+\newblock Grand tour and projection pursuit.
+\newblock {\em Journal of Computational and Graphical Statistics},
+  4(3):155--172, 1995.
 
 \bibitem{DBLP:journals/tc/FriedmanT74}
 J.~H. Friedman and J.~W. Tukey.
 \newblock A projection pursuit algorithm for exploratory data analysis.
 \newblock {\em {IEEE} Trans. Computers}, 23(9):881--890, 1974.
 
+\bibitem{DBLP:journals/tvcg/Gleicher13}
+M.~Gleicher.
+\newblock Explainers: Expert explorations with crafted projections.
+\newblock {\em {IEEE} Trans. Vis. Comput. Graph.}, 19(12):2042--2051, 2013.
+
 \bibitem{DBLP:journals/tvcg/HuBMHNL13}
 X.~Hu, L.~Bradel, D.~Maiti, L.~House, C.~North, and S.~Leman.
 \newblock Semantics of directly manipulating spatializations.
 \newblock {\em {IEEE} Trans. Vis. Comput. Graph.}, 19(12):2052--2059, 2013.
 
-\bibitem{jeong2009ipca}
-D.~H. Jeong, C.~Ziemkiewicz, B.~Fisher, W.~Ribarsky, and R.~Chang.
+\bibitem{DBLP:journals/cgf/JeongZFRC09}
+D.~H. Jeong, C.~Ziemkiewicz, B.~D. Fisher, W.~Ribarsky, and R.~Chang.
 \newblock ipca: An interactive system for pca-based visual analytics.
-\newblock In {\em Computer Graphics Forum}, volume~28, pages 767--774. Wiley
-  Online Library, 2009.
+\newblock {\em Comput. Graph. Forum}, 28(3):767--774, 2009.
+
+\bibitem{DBLP:journals/tvcg/JohanssonJ09}
+S.~Johansson and J.~Johansson.
+\newblock Interactive dimensionality reduction through user-defined
+  combinations of quality metrics.
+\newblock {\em {IEEE} Trans. Vis. Comput. Graph.}, 15(6):993--1000, 2009.
+
+\bibitem{DBLP:journals/tvcg/JoiaCCPN11}
+P.~Joia, D.~Coimbra, J.~A. Cuminato, F.~V. Paulovich, and L.~G. Nonato.
+\newblock Local affine multidimensional projection.
+\newblock {\em {IEEE} Trans. Vis. Comput. Graph.}, 17(12):2563--2571, 2011.
+
+\bibitem{DBLP:conf/ieeevast/Kandogan12}
+E.~Kandogan.
+\newblock Just-in-time annotation of clusters, outliers, and trends in
+  point-based data visualizations.
+\newblock In {\em 2012 {IEEE} Conference on Visual Analytics Science and
+  Technology, {VAST} 2012, Seattle, WA, USA, October 14-19, 2012}, pages
+  73--82, 2012.
 
 \bibitem{DBLP:journals/tvcg/LehmannT13}
 D.~J. Lehmann and H.~Theisel.
 \newblock Orthographic star coordinates.
 \newblock {\em {IEEE} Trans. Vis. Comput. Graph.}, 19(12):2615--2624, 2013.
+
+\bibitem{DBLP:journals/cgf/LiuWTBP15}
+S.~Liu, B.~Wang, J.~J. Thiagarajan, P.~Bremer, and V.~Pascucci.
+\newblock Visual exploration of high-dimensional data through subspace analysis
+  and dynamic projections.
+\newblock {\em Comput. Graph. Forum}, 34(3):271--280, 2015.
+
+\bibitem{DBLP:journals/cg/MartinsCMT14}
+R.~M. Martins, D.~B. Coimbra, R.~Minghim, and A.~C. Telea.
+\newblock Visual analysis of dimensionality reduction quality for parameterized
+  projections.
+\newblock {\em Computers {\&} Graphics}, 41:26--42, 2014.
 
 \bibitem{DBLP:journals/tvcg/NamM13}
 J.~E. Nam and K.~Mueller.
@@ -50,6 +94,12 @@ M.~Sips, B.~Neubert, J.~P. Lewis, and P.~Hanrahan.
 \newblock Selecting good views of high-dimensional data using class
   consistency.
 \newblock {\em Comput. Graph. Forum}, 28(3):831--838, 2009.
+
+\bibitem{DBLP:journals/tvcg/StahnkeDMT16}
+J.~Stahnke, M.~D{\"{o}}rk, B.~M{\"{u}}ller, and A.~Thom.
+\newblock Probing projections: Interaction techniques for interpreting
+  arrangements and errors of dimensionality reductions.
+\newblock {\em {IEEE} Trans. Vis. Comput. Graph.}, 22(1):629--638, 2016.
 
 \bibitem{DBLP:journals/tvcg/YuanRWG13}
 X.~Yuan, D.~Ren, Z.~Wang, and C.~Guo.
