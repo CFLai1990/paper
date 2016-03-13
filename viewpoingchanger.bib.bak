@@ -49,6 +49,7 @@
   Year                     = {2012},
   Pages                    = {43--52},
 
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/conf/ieeevast/AnandWN12},
   Doi                      = {10.1109/VAST.2012.6400490},
@@ -67,6 +68,7 @@
   Pages                    = {1304--1330},
   Volume                   = {70},
 
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/ijon/Aupetit07},
   Doi                      = {10.1016/j.neucom.2006.11.018},
@@ -86,6 +88,7 @@
   Year                     = {2012},
   Pages                    = {83--92},
 
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/conf/ieeevast/BrownLBC12},
   Doi                      = {10.1109/VAST.2012.6400486},
@@ -129,6 +132,7 @@
   Year                     = {2010},
   Pages                    = {27--34},
 
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/conf/ieeevast/ChooLKP10},
   Doi                      = {10.1109/VAST.2010.5652443},
@@ -164,7 +168,7 @@
   Pages                    = {1539--1148},
   Volume                   = {14},
 
-  __markedentry            = {},
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tvcg/ElmqvistDF08},
   Doi                      = {10.1109/TVCG.2008.153},
@@ -183,7 +187,7 @@
   Pages                    = {881--890},
   Volume                   = {23},
 
-  __markedentry            = {},
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tc/FriedmanT74},
   Doi                      = {10.1109/T-C.1974.224051},
@@ -226,6 +230,7 @@
   Pages                    = {2042--2051},
   Volume                   = {19},
 
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tvcg/Gleicher13},
   Doi                      = {10.1109/TVCG.2013.157},
@@ -248,7 +253,7 @@
   Pages                    = {2052--2059},
   Volume                   = {19},
 
-  __markedentry            = {},
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tvcg/HuBMHNL13},
   Doi                      = {10.1109/TVCG.2013.188},
@@ -271,6 +276,7 @@
   Year                     = {2010},
   Pages                    = {3--10},
 
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/conf/ieeevast/IngramMITBM10},
   Doi                      = {10.1109/VAST.2010.5652392},
@@ -313,6 +319,7 @@
   Pages                    = {767--774},
   Volume                   = {28},
 
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/cgf/JeongZFRC09},
   Doi                      = {10.1111/j.1467-8659.2009.01475.x},
@@ -331,7 +338,7 @@
   Pages                    = {993--1000},
   Volume                   = {15},
 
-  __markedentry            = {},
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tvcg/YuanGXZQ09},
   Doi                      = {10.1109/TVCG.2009.153},
@@ -378,6 +385,7 @@
   Pages                    = {2563--2571},
   Volume                   = {17},
 
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tvcg/JoiaCCPN11},
   Doi                      = {10.1109/TVCG.2011.220},
@@ -420,6 +428,7 @@
   Year                     = {2012},
   Pages                    = {73--82},
 
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/conf/ieeevast/Kandogan12},
   Doi                      = {10.1109/VAST.2012.6400487},
@@ -489,6 +498,7 @@
   Pages                    = {1155--1164},
   Volume                   = {31},
 
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/cgf/LeeKCSP12},
   Doi                      = {10.1111/j.1467-8659.2012.03108.x},
@@ -507,7 +517,7 @@
   Pages                    = {2615--2624},
   Volume                   = {19},
 
-  __markedentry            = {},
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tvcg/LehmannT13},
   Doi                      = {10.1109/TVCG.2013.182},
@@ -555,6 +565,7 @@
   Pages                    = {271--280},
   Volume                   = {34},
 
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/cgf/LiuWTBP15},
   Doi                      = {10.1111/cgf.12639},
@@ -600,6 +611,7 @@
   Pages                    = {26--42},
   Volume                   = {41},
 
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/cg/MartinsCMT14},
   Doi                      = {10.1016/j.cag.2014.01.006},
@@ -621,6 +633,7 @@
   Year                     = {2007},
   Pages                    = {75--82},
 
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/conf/ieeevast/NamHMZI07},
   Doi                      = {10.1109/VAST.2007.4388999},
@@ -640,7 +653,7 @@
   Pages                    = {291--305},
   Volume                   = {19},
 
-  __markedentry            = {},
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tvcg/NamM13},
   Doi                      = {10.1109/TVCG.2012.65},
@@ -674,6 +687,23 @@
   Url                      = {http://dx.doi.org/10.1109/TVCG.2012.65}
 }
 
+@InProceedings{DBLP:conf/apvis/NhonW14,
+  Title                    = {ScagExplorer: Exploring Scatterplots by Their Scagnostics},
+  Author                   = {Dang Tuan Nhon and
+ Leland Wilkinson},
+  Booktitle                = {{IEEE} Pacific Visualization Symposium, PacificVis 2014, Yokohama,
+ Japan, March 4-7, 2014},
+  Year                     = {2014},
+  Pages                    = {73--80},
+
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/conf/apvis/NhonW14},
+  Doi                      = {10.1109/PacificVis.2014.42},
+  Owner                    = {chufanlai},
+  Timestamp                = {Wed, 24 Sep 2014 09:00:38 +0200},
+  Url                      = {http://doi.ieeecomputersociety.org/10.1109/PacificVis.2014.42}
+}
+
 @Article{DBLP:journals/ivs/SeoS05,
   Title                    = {A rank-by-feature framework for interactive exploration of multidimensional
  data},
@@ -685,7 +715,7 @@
   Pages                    = {96--113},
   Volume                   = {4},
 
-  __markedentry            = {},
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/ivs/SeoS05},
   Doi                      = {10.1057/palgrave.ivs.9500091},
@@ -730,7 +760,7 @@
   Pages                    = {831--838},
   Volume                   = {28},
 
-  __markedentry            = {},
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/cgf/SipsNLH09},
   Doi                      = {10.1111/j.1467-8659.2009.01467.x},
@@ -773,6 +803,7 @@
   Pages                    = {629--638},
   Volume                   = {22},
 
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tvcg/StahnkeDMT16},
   Doi                      = {10.1109/TVCG.2015.2467717},
@@ -818,6 +849,7 @@
   Pages                    = {1363--1372},
   Volume                   = {12},
 
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tvcg/WilkinsonAG06},
   Doi                      = {10.1109/TVCG.2006.94},
@@ -839,7 +871,7 @@
   Pages                    = {2625--2633},
   Volume                   = {19},
 
-  __markedentry            = {},
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tvcg/YuanRWG13},
   Doi                      = {10.1109/TVCG.2013.150},

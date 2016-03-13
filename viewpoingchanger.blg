@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: viewpoingchanger.aux
 The style file: abbrv.bst
 Database file #1: viewpoingchanger.bib
-You've used 18 entries,
+You've used 21 entries,
             2118 wiz_defined-function locations,
-            616 strings with 7809 characters,
-and the built_in function-call counts, 7092 in all, are:
-= -- 707
-> -- 357
-< -- 3
-+ -- 142
-- -- 122
-* -- 574
-:= -- 1168
-add.period$ -- 54
-call.type$ -- 18
-change.case$ -- 115
+            638 strings with 8446 characters,
+and the built_in function-call counts, 8184 in all, are:
+= -- 820
+> -- 395
+< -- 4
++ -- 157
+- -- 134
+* -- 651
+:= -- 1338
+add.period$ -- 63
+call.type$ -- 21
+change.case$ -- 130
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 228
-empty$ -- 527
-format.name$ -- 122
-if$ -- 1445
+cite$ -- 21
+duplicate$ -- 271
+empty$ -- 621
+format.name$ -- 134
+if$ -- 1679
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 18
-newline$ -- 93
-num.names$ -- 36
-pop$ -- 94
+int.to.str$ -- 21
+missing$ -- 21
+newline$ -- 108
+num.names$ -- 42
+pop$ -- 108
 preamble$ -- 1
-purify$ -- 97
+purify$ -- 109
 quote$ -- 0
-skip$ -- 160
+skip$ -- 192
 stack$ -- 0
-substring$ -- 563
-swap$ -- 42
-text.length$ -- 3
+substring$ -- 658
+swap$ -- 53
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 72
+type$ -- 84
 warning$ -- 0
-while$ -- 75
-width$ -- 20
-write$ -- 200
+while$ -- 88
+width$ -- 23
+write$ -- 233
