@@ -119,6 +119,26 @@
   Url                      = {http://dx.doi.org/10.1109/VAST.2012.6400486}
 }
 
+@Article{DBLP:journals/tsp/CarterRH10,
+  Title                    = {On local intrinsic dimension estimation and its applications},
+  Author                   = {Kevin M. Carter and
+ Raviv Raich and
+ Alfred O. Hero III},
+  Journal                  = {{IEEE} Trans. Signal Processing},
+  Year                     = {2010},
+  Number                   = {2},
+  Pages                    = {650--663},
+  Volume                   = {58},
+
+  __markedentry            = {[chufanlai:3]},
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tsp/CarterRH10},
+  Doi                      = {10.1109/TSP.2009.2031722},
+  Owner                    = {chufanlai},
+  Timestamp                = {Wed, 09 Mar 2016 16:11:23 +0100},
+  Url                      = {http://dx.doi.org/10.1109/TSP.2009.2031722}
+}
+
 @InProceedings{DBLP:conf/ieeevast/ChooLKP10,
   Title                    = {iVisClassifier: An interactive visual analytics system for classification
  based on supervised dimension reduction},
@@ -696,6 +716,7 @@
   Year                     = {2014},
   Pages                    = {73--80},
 
+  __markedentry            = {[chufanlai:3]},
   Bibsource                = {dblp computer science bibliography, http://dblp.org},
   Biburl                   = {http://dblp.uni-trier.de/rec/bib/conf/apvis/NhonW14},
   Doi                      = {10.1109/PacificVis.2014.42},
