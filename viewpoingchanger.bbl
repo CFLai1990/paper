@@ -106,6 +106,13 @@ J.~Seo and B.~Shneiderman.
   multidimensional data.
 \newblock {\em Information Visualization}, 4(2):96--113, 2005.
 
+\bibitem{DBLP:conf/vl/Shneiderman96}
+B.~Shneiderman.
+\newblock The eyes have it: {A} task by data type taxonomy for information
+  visualizations.
+\newblock In {\em Proceedings of the 1996 {IEEE} Symposium on Visual Languages,
+  Boulder, Colorado, USA, September 3-6, 1996}, pages 336--343, 1996.
+
 \bibitem{DBLP:journals/cgf/SipsNLH09}
 M.~Sips, B.~Neubert, J.~P. Lewis, and P.~Hanrahan.
 \newblock Selecting good views of high-dimensional data using class

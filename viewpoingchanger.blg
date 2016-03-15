@@ -3,44 +3,48 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: viewpoingchanger.aux
 The style file: abbrv.bst
 Database file #1: viewpoingchanger.bib
-You've used 21 entries,
+A bad cross reference---entry "DBLP:conf/vl/Shneiderman96"
+refers to entry "DBLP:conf/vl/1996", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/vl/1996"
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            638 strings with 8446 characters,
-and the built_in function-call counts, 8184 in all, are:
-= -- 820
-> -- 395
-< -- 4
-+ -- 157
-- -- 134
-* -- 651
-:= -- 1338
-add.period$ -- 63
-call.type$ -- 21
-change.case$ -- 130
+            647 strings with 8743 characters,
+and the built_in function-call counts, 8601 in all, are:
+= -- 864
+> -- 402
+< -- 5
++ -- 161
+- -- 136
+* -- 671
+:= -- 1393
+add.period$ -- 66
+call.type$ -- 22
+change.case$ -- 134
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 271
-empty$ -- 621
-format.name$ -- 134
-if$ -- 1679
+cite$ -- 22
+duplicate$ -- 294
+empty$ -- 662
+format.name$ -- 136
+if$ -- 1778
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 21
-newline$ -- 108
-num.names$ -- 42
-pop$ -- 108
+int.to.str$ -- 22
+missing$ -- 22
+newline$ -- 113
+num.names$ -- 44
+pop$ -- 115
 preamble$ -- 1
-purify$ -- 109
+purify$ -- 112
 quote$ -- 0
-skip$ -- 192
+skip$ -- 212
 stack$ -- 0
-substring$ -- 658
-swap$ -- 53
-text.length$ -- 4
+substring$ -- 696
+swap$ -- 64
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 84
+type$ -- 88
 warning$ -- 0
-while$ -- 88
-width$ -- 23
-write$ -- 233
+while$ -- 93
+width$ -- 24
+write$ -- 244
+(There was 1 error message)
