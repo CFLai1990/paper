@@ -6,45 +6,45 @@ Database file #1: viewpoingchanger.bib
 A bad cross reference---entry "DBLP:conf/vl/Shneiderman96"
 refers to entry "DBLP:conf/vl/1996", which doesn't exist
 Warning--I didn't find a database entry for "DBLP:conf/vl/1996"
-You've used 22 entries,
+You've used 31 entries,
             2118 wiz_defined-function locations,
-            647 strings with 8743 characters,
-and the built_in function-call counts, 8601 in all, are:
-= -- 864
-> -- 402
-< -- 5
-+ -- 161
-- -- 136
-* -- 671
-:= -- 1393
-add.period$ -- 66
-call.type$ -- 22
-change.case$ -- 134
+            700 strings with 10825 characters,
+and the built_in function-call counts, 12063 in all, are:
+= -- 1198
+> -- 588
+< -- 7
++ -- 236
+- -- 200
+* -- 935
+:= -- 1960
+add.period$ -- 93
+call.type$ -- 31
+change.case$ -- 191
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 294
-empty$ -- 662
-format.name$ -- 136
-if$ -- 1778
+cite$ -- 31
+duplicate$ -- 415
+empty$ -- 921
+format.name$ -- 200
+if$ -- 2492
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 22
-newline$ -- 113
-num.names$ -- 44
-pop$ -- 115
+int.to.str$ -- 31
+missing$ -- 33
+newline$ -- 158
+num.names$ -- 62
+pop$ -- 178
 preamble$ -- 1
-purify$ -- 112
+purify$ -- 162
 quote$ -- 0
-skip$ -- 212
+skip$ -- 295
 stack$ -- 0
-substring$ -- 696
-swap$ -- 64
-text.length$ -- 5
+substring$ -- 928
+swap$ -- 89
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 88
+type$ -- 120
 warning$ -- 0
-while$ -- 93
-width$ -- 24
-write$ -- 244
+while$ -- 127
+width$ -- 33
+write$ -- 341
 (There was 1 error message)

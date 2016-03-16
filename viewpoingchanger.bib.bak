@@ -2,6 +2,24 @@
 % Encoding: UTF-8
 
 
+@InProceedings{DBLP:conf/vl/Shneiderman96,
+  Title                    = {The Eyes Have It: {A} Task by Data Type Taxonomy for Information Visualizations},
+  Author                   = {Ben Shneiderman},
+  Booktitle                = {Proceedings of the 1996 {IEEE} Symposium on Visual Languages, Boulder,
+ Colorado, USA, September 3-6, 1996},
+  Year                     = {1996},
+  Pages                    = {336--343},
+
+  __markedentry            = {[chufanlai:3]},
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/conf/vl/Shneiderman96},
+  Crossref                 = {DBLP:conf/vl/1996},
+  Doi                      = {10.1109/VL.1996.545307},
+  Owner                    = {chufanlai},
+  Timestamp                = {Tue, 11 Aug 2015 15:15:52 +0200},
+  Url                      = {http://dx.doi.org/10.1109/VL.1996.545307}
+}
+
 @Article{absil2004riemannian,
   Title                    = {Riemannian geometry of Grassmann manifolds with a view on algorithmic computation},
   Author                   = {Absil, P-A and Mahony, Robert and Sepulchre, Rodolphe},
@@ -15,6 +33,24 @@
   Owner                    = {chufanlai},
   Publisher                = {Springer},
   Timestamp                = {2016.01.29}
+}
+
+@InProceedings{DBLP:conf/ieeevast/AlbuquerqueEM11,
+  Title                    = {Perception-based visual quality measures},
+  Author                   = {Georgia Albuquerque and
+ Martin Eisemann and
+ Marcus A. Magnor},
+  Booktitle                = {2011 {IEEE} Conference on Visual Analytics Science and Technology,
+ {VAST} 2011, Providence, Rhode Island, USA, October 23-28, 2011},
+  Year                     = {2011},
+  Pages                    = {13--20},
+
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/conf/ieeevast/AlbuquerqueEM11},
+  Doi                      = {10.1109/VAST.2011.6102437},
+  Owner                    = {chufanlai},
+  Timestamp                = {Tue, 18 Nov 2014 16:59:05 +0100},
+  Url                      = {http://dx.doi.org/10.1109/VAST.2011.6102437}
 }
 
 @InProceedings{Anand:2012:VPD:2478276.2478285,
@@ -75,6 +111,35 @@
   Owner                    = {chufanlai},
   Timestamp                = {Wed, 07 Nov 2007 13:31:51 +0100},
   Url                      = {http://dx.doi.org/10.1016/j.neucom.2006.11.018}
+}
+
+@Article{DBLP:journals/tvcg/Bertini11,
+  Title                    = {Quality Metrics in High-Dimensional Data Visualization: An Overview
+ and Systematization},
+  Author                   = {Enrico Bertini},
+  Journal                  = {{IEEE} Trans. Vis. Comput. Graph.},
+  Year                     = {2011},
+  Number                   = {12},
+  Pages                    = {2203--2212},
+  Volume                   = {17},
+
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tvcg/Bertini11},
+  Doi                      = {10.1109/TVCG.2011.229},
+  Owner                    = {chufanlai},
+  Timestamp                = {Tue, 08 Mar 2016 09:04:37 +0100},
+  Url                      = {http://dx.doi.org/10.1109/TVCG.2011.229}
+}
+
+@Book{borg2005modern,
+  Title                    = {Modern multidimensional scaling: Theory and applications},
+  Author                   = {Borg, Ingwer and Groenen, Patrick JF},
+  Publisher                = {Springer Science \& Business Media},
+  Year                     = {2005},
+
+  __markedentry            = {[chufanlai:2]},
+  Owner                    = {chufanlai},
+  Timestamp                = {2016.03.16}
 }
 
 @InProceedings{DBLP:conf/ieeevast/BrownLBC12,
@@ -195,6 +260,30 @@
   Owner                    = {chufanlai},
   Timestamp                = {Mon, 07 Nov 2011 16:59:18 +0100},
   Url                      = {http://doi.ieeecomputersociety.org/10.1109/TVCG.2008.153}
+}
+
+@Article{DBLP:journals/tvcg/EtemadpourMPMOL15,
+  Title                    = {Perception-Based Evaluation of Projection Methods for Multidimensional
+ Data Visualization},
+  Author                   = {Ronak Etemadpour and
+ Robson Motta and
+ Jose Gustavo de Souza Paiva and
+ Rosane Minghim and
+ Maria Cristina Ferreira de Oliveira and
+ Lars Linsen},
+  Journal                  = {{IEEE} Trans. Vis. Comput. Graph.},
+  Year                     = {2015},
+  Number                   = {1},
+  Pages                    = {81--94},
+  Volume                   = {21},
+
+  __markedentry            = {[chufanlai:3]},
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/tvcg/EtemadpourMPMOL15},
+  Doi                      = {10.1109/TVCG.2014.2330617},
+  Owner                    = {chufanlai},
+  Timestamp                = {Mon, 07 Mar 2016 17:32:01 +0100},
+  Url                      = {http://dx.doi.org/10.1109/TVCG.2014.2330617}
 }
 
 @Article{DBLP:journals/tc/FriedmanT74,
@@ -439,6 +528,17 @@
   Url                      = {http://dx.doi.org/10.1109/TVCG.2011.220}
 }
 
+@Book{jolliffe2002principal,
+  Title                    = {Principal component analysis},
+  Author                   = {Jolliffe, Ian},
+  Publisher                = {Wiley Online Library},
+  Year                     = {2002},
+
+  __markedentry            = {[chufanlai:2]},
+  Owner                    = {chufanlai},
+  Timestamp                = {2016.03.16}
+}
+
 @InProceedings{DBLP:conf/ieeevast/Kandogan12,
   Title                    = {Just-in-time annotation of clusters, outliers, and trends in point-based
  data visualizations},
@@ -477,6 +577,18 @@
   Owner                    = {chufanlai},
   Timestamp                = {2016.03.12},
   Url                      = {http://dx.doi.org/10.1109/VAST.2012.6400487}
+}
+
+@Book{kruskal1978multidimensional,
+  Title                    = {Multidimensional scaling},
+  Author                   = {Kruskal, Joseph B and Wish, Myron},
+  Publisher                = {Sage},
+  Year                     = {1978},
+  Volume                   = {11},
+
+  __markedentry            = {[chufanlai:2]},
+  Owner                    = {chufanlai},
+  Timestamp                = {2016.03.16}
 }
 
 @Article{Lee:2012:IIV:2322389.2322393,
@@ -569,6 +681,28 @@
   Publisher                = {IEEE Educational Activities Department},
   Timestamp                = {2016.03.12},
   Url                      = {http://dx.doi.org/10.1109/TVCG.2013.182}
+}
+
+@Article{DBLP:journals/cgf/LiuWBP14,
+  Title                    = {Distortion-Guided Structure-Driven Interactive Exploration of High-Dimensional
+ Data},
+  Author                   = {Shusen Liu and
+ Bei Wang and
+ Peer{-}Timo Bremer and
+ Valerio Pascucci},
+  Journal                  = {Comput. Graph. Forum},
+  Year                     = {2014},
+  Number                   = {3},
+  Pages                    = {101--110},
+  Volume                   = {33},
+
+  __markedentry            = {[chufanlai:3]},
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/cgf/LiuWBP14},
+  Doi                      = {10.1111/cgf.12366},
+  Owner                    = {chufanlai},
+  Timestamp                = {Thu, 29 Jan 2015 15:09:16 +0100},
+  Url                      = {http://dx.doi.org/10.1111/cgf.12366}
 }
 
 @Article{DBLP:journals/cgf/LiuWTBP15,
@@ -725,6 +859,42 @@
   Url                      = {http://doi.ieeecomputersociety.org/10.1109/PacificVis.2014.42}
 }
 
+@Article{roweis2000nonlinear,
+  Title                    = {Nonlinear dimensionality reduction by locally linear embedding},
+  Author                   = {Roweis, Sam T and Saul, Lawrence K},
+  Journal                  = {Science},
+  Year                     = {2000},
+  Number                   = {5500},
+  Pages                    = {2323--2326},
+  Volume                   = {290},
+
+  __markedentry            = {[chufanlai:2]},
+  Owner                    = {chufanlai},
+  Publisher                = {American Association for the Advancement of Science},
+  Timestamp                = {2016.03.16}
+}
+
+@Article{DBLP:journals/cgf/SedlmairTMT12,
+  Title                    = {A Taxonomy of Visual Cluster Separation Factors},
+  Author                   = {Michael Sedlmair and
+ A. Tatu and
+ Tamara Munzner and
+ Melanie Tory},
+  Journal                  = {Comput. Graph. Forum},
+  Year                     = {2012},
+  Number                   = {3},
+  Pages                    = {1335--1344},
+  Volume                   = {31},
+
+  __markedentry            = {[chufanlai:3]},
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/journals/cgf/SedlmairTMT12},
+  Doi                      = {10.1111/j.1467-8659.2012.03125.x},
+  Owner                    = {chufanlai},
+  Timestamp                = {Thu, 06 Sep 2012 16:52:43 +0200},
+  Url                      = {http://dx.doi.org/10.1111/j.1467-8659.2012.03125.x}
+}
+
 @Article{DBLP:journals/ivs/SeoS05,
   Title                    = {A rank-by-feature framework for interactive exploration of multidimensional
  data},
@@ -831,6 +1001,46 @@
   Owner                    = {chufanlai},
   Timestamp                = {Tue, 08 Mar 2016 09:04:39 +0100},
   Url                      = {http://dx.doi.org/10.1109/TVCG.2015.2467717}
+}
+
+@InProceedings{DBLP:conf/ieeevast/TatuAESTMK09,
+  Title                    = {Combining automated analysis and visualization techniques for effective
+ exploration of high-dimensional data},
+  Author                   = {Andrada Tatu and
+ Georgia Albuquerque and
+ Martin Eisemann and
+ J{\"{o}}rn Schneidewind and
+ Holger Theisel and
+ Marcus A. Magnor and
+ Daniel A. Keim},
+  Booktitle                = {Proceedings of the {IEEE} Symposium on Visual Analytics Science and
+ Technology, {IEEE} {VAST} 2009, Atlantic City, New Jersey, USA, 11-16
+ October 2009, part of VisWeek 2009},
+  Year                     = {2009},
+  Pages                    = {59--66},
+
+  __markedentry            = {[chufanlai:3]},
+  Bibsource                = {dblp computer science bibliography, http://dblp.org},
+  Biburl                   = {http://dblp.uni-trier.de/rec/bib/conf/ieeevast/TatuAESTMK09},
+  Doi                      = {10.1109/VAST.2009.5332628},
+  Owner                    = {chufanlai},
+  Timestamp                = {Tue, 18 Nov 2014 16:59:05 +0100},
+  Url                      = {http://dx.doi.org/10.1109/VAST.2009.5332628}
+}
+
+@Article{tenenbaum2000global,
+  Title                    = {A global geometric framework for nonlinear dimensionality reduction},
+  Author                   = {Tenenbaum, Joshua B and De Silva, Vin and Langford, John C},
+  Journal                  = {science},
+  Year                     = {2000},
+  Number                   = {5500},
+  Pages                    = {2319--2323},
+  Volume                   = {290},
+
+  __markedentry            = {[chufanlai:2]},
+  Owner                    = {chufanlai},
+  Publisher                = {American Association for the Advancement of Science},
+  Timestamp                = {2016.03.16}
 }
 
 @Article{Wilkinson:2006:HVA:1175891.1176151,

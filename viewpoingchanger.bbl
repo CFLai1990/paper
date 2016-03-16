@@ -1,10 +1,22 @@
 \begin{thebibliography}{10}
 
+\bibitem{DBLP:conf/ieeevast/AlbuquerqueEM11}
+G.~Albuquerque, M.~Eisemann, and M.~A. Magnor.
+\newblock Perception-based visual quality measures.
+\newblock In {\em 2011 {IEEE} Conference on Visual Analytics Science and
+  Technology, {VAST} 2011, Providence, Rhode Island, USA, October 23-28, 2011},
+  pages 13--20, 2011.
+
 \bibitem{DBLP:journals/ijon/Aupetit07}
 M.~Aupetit.
 \newblock Visualizing distortions and recovering topology in continuous
   projection techniques.
 \newblock {\em Neurocomputing}, 70(7-9):1304--1330, 2007.
+
+\bibitem{borg2005modern}
+I.~Borg and P.~J. Groenen.
+\newblock {\em Modern multidimensional scaling: Theory and applications}.
+\newblock Springer Science \& Business Media, 2005.
 
 \bibitem{DBLP:conf/ieeevast/BrownLBC12}
 E.~T. Brown, J.~Liu, C.~E. Brodley, and R.~Chang.
@@ -31,6 +43,13 @@ D.~Cook, A.~Buja, J.~Cabrera, and C.~Hurley.
 \newblock Grand tour and projection pursuit.
 \newblock {\em Journal of Computational and Graphical Statistics},
   4(3):155--172, 1995.
+
+\bibitem{DBLP:journals/tvcg/EtemadpourMPMOL15}
+R.~Etemadpour, R.~Motta, J.~G. de~Souza~Paiva, R.~Minghim, M.~C.~F.
+  de~Oliveira, and L.~Linsen.
+\newblock Perception-based evaluation of projection methods for
+  multidimensional data visualization.
+\newblock {\em {IEEE} Trans. Vis. Comput. Graph.}, 21(1):81--94, 2015.
 
 \bibitem{DBLP:journals/tc/FriedmanT74}
 J.~H. Friedman and J.~W. Tukey.
@@ -63,6 +82,11 @@ P.~Joia, D.~Coimbra, J.~A. Cuminato, F.~V. Paulovich, and L.~G. Nonato.
 \newblock Local affine multidimensional projection.
 \newblock {\em {IEEE} Trans. Vis. Comput. Graph.}, 17(12):2563--2571, 2011.
 
+\bibitem{jolliffe2002principal}
+I.~Jolliffe.
+\newblock {\em Principal component analysis}.
+\newblock Wiley Online Library, 2002.
+
 \bibitem{DBLP:conf/ieeevast/Kandogan12}
 E.~Kandogan.
 \newblock Just-in-time annotation of clusters, outliers, and trends in
@@ -75,6 +99,12 @@ E.~Kandogan.
 D.~J. Lehmann and H.~Theisel.
 \newblock Orthographic star coordinates.
 \newblock {\em {IEEE} Trans. Vis. Comput. Graph.}, 19(12):2615--2624, 2013.
+
+\bibitem{DBLP:journals/cgf/LiuWBP14}
+S.~Liu, B.~Wang, P.~Bremer, and V.~Pascucci.
+\newblock Distortion-guided structure-driven interactive exploration of
+  high-dimensional data.
+\newblock {\em Comput. Graph. Forum}, 33(3):101--110, 2014.
 
 \bibitem{DBLP:journals/cgf/LiuWTBP15}
 S.~Liu, B.~Wang, J.~J. Thiagarajan, P.~Bremer, and V.~Pascucci.
@@ -100,6 +130,16 @@ D.~T. Nhon and L.~Wilkinson.
 \newblock In {\em {IEEE} Pacific Visualization Symposium, PacificVis 2014,
   Yokohama, Japan, March 4-7, 2014}, pages 73--80, 2014.
 
+\bibitem{roweis2000nonlinear}
+S.~T. Roweis and L.~K. Saul.
+\newblock Nonlinear dimensionality reduction by locally linear embedding.
+\newblock {\em Science}, 290(5500):2323--2326, 2000.
+
+\bibitem{DBLP:journals/cgf/SedlmairTMT12}
+M.~Sedlmair, A.~Tatu, T.~Munzner, and M.~Tory.
+\newblock A taxonomy of visual cluster separation factors.
+\newblock {\em Comput. Graph. Forum}, 31(3):1335--1344, 2012.
+
 \bibitem{DBLP:journals/ivs/SeoS05}
 J.~Seo and B.~Shneiderman.
 \newblock A rank-by-feature framework for interactive exploration of
@@ -124,6 +164,20 @@ J.~Stahnke, M.~D{\"{o}}rk, B.~M{\"{u}}ller, and A.~Thom.
 \newblock Probing projections: Interaction techniques for interpreting
   arrangements and errors of dimensionality reductions.
 \newblock {\em {IEEE} Trans. Vis. Comput. Graph.}, 22(1):629--638, 2016.
+
+\bibitem{DBLP:conf/ieeevast/TatuAESTMK09}
+A.~Tatu, G.~Albuquerque, M.~Eisemann, J.~Schneidewind, H.~Theisel, M.~A.
+  Magnor, and D.~A. Keim.
+\newblock Combining automated analysis and visualization techniques for
+  effective exploration of high-dimensional data.
+\newblock In {\em Proceedings of the {IEEE} Symposium on Visual Analytics
+  Science and Technology, {IEEE} {VAST} 2009, Atlantic City, New Jersey, USA,
+  11-16 October 2009, part of VisWeek 2009}, pages 59--66, 2009.
+
+\bibitem{tenenbaum2000global}
+J.~B. Tenenbaum, V.~De~Silva, and J.~C. Langford.
+\newblock A global geometric framework for nonlinear dimensionality reduction.
+\newblock {\em science}, 290(5500):2319--2323, 2000.
 
 \bibitem{DBLP:journals/tvcg/YuanRWG13}
 X.~Yuan, D.~Ren, Z.~Wang, and C.~Guo.
