@@ -1,11 +1,32 @@
 \section{High-dimensional Data Exploration Guided by Distortion-Free Local Analysis}
-As previously mentioned, the proposed method supports a four-step exploration. In this section, we'll elaborate details of our method in each step of the exploration process.
+As shown in the workflow, the proposed method supports a four-step exploration. In this section, we'll elaborate details of our method in each step of the exploration process.
 \label{section:method}
-\subsection{Discovering Interesting Local Focus}
-Following Shneiderman's suggestion~\cite{DBLP:conf/vl/Shneiderman96}, we first provide the PCA projection as an overview of the data. Then we help the user find an interesting subset as the focus of subsequent local analysis. In a projection, there are two situations where some local data is considered interesting. First, the data is involved in some featured relationships, like being an outlier or a cluster. The relationship may have been distorted, but it's still the dominant relationships in the current projection. Second,
-\subsubsection{Focus in Different Granularities}
-\subsubsection{Showing Distance Distortion}
+\subsection{Discovering Interesting Local Data}
+Following Shneiderman's suggestion~\cite{DBLP:conf/vl/Shneiderman96}, we first provide the PCA projection as an overview of the data. Then we help the user find an interesting subset as the focus of subsequent local analysis.
+
+In a projection, there are two situations where some local data is considered interesting. The first case is related to distance distortion. Incorrect distances result in false neighborhood relationships. Closely distributed data may be far away in the original space and vice versa. Data involved in a distorted local area is regarded informative in the projection. It's also the basic idea in previous works concerning about local errors~\cite{DBLP:journals/cg/MartinsCMT14}~\cite{DBLP:journals/tvcg/StahnkeDMT16}. But such analysis can only focus on each datum at a time. It's hard to describe group relationships in this context. In the second case, the data is involved in some featured relationships, like being an outlier or a cluster. The relationship may have been distorted, but it's still strong enough to dominate the current projection. Hence, it makes a reasonable focus for a further study. Besides, it's suitable to describe a group of data in the context of relationships, rather than distance errors.
+
+To put it simply, distance distortion analysis focuses more on the neighborhood of a single datum. Relationship distortion analysis helps to study a group of data. Regarding the two cases, we adopt different means to help user find an interesting local focus.
+
+\subsubsection{Datum Suggestion Based on Distance Distortion}
+For any given projection, we consider a datum interesting if its distances to other data have been severely distorted. To measure the distortion, we accumulate distance errors for each datum in the projection:
+$$Error(\mathbf{x}_{i}^{\prime}) = \sum\limits_{j=1}^{n}(Dist(\mathbf{x}_{i}, \mathbf{x}_{j}) - Dist(\mathbf{x}_{i}^{\prime}, \mathbf{x}_{j}^{\prime}))^{2}, i = 1,2,\cdots n$$
+Here the $\mathbf{x}_{i}$ and $\mathbf{x}_{i}^{\prime}$ represents the original data and the projected data respectively. Distance is measured by the Euclidean distance metric, taking into account all dimensions. We use point size to encode the accumulated distortion of each datum, as shown in Figure. \col{(Figure to be added.)}
+
+On the other hand, we provide interactive hints to reveal the real distances. The approach is similar to that used in~\cite{DBLP:journals/tvcg/StahnkeDMT16}, but uses a different metaphor. When user hovers on the projection, we construct a so-called 'high-dimensional lantern' using interpolation. Assume that the hovered position corresponds to a two-dimensional datum $\mathbf{p}^{\prime}$, we interpolate its high-dimensional counterpart as follows:
+$$\mathbf{p} = \sum\limits_{i=1}^{n}\mathbf{w}_{i}\cdot\mathbf{x}_{i} =  \sum\limits_{i=1}^{n}\frac{Dist(\mathbf{x}_{i}^{\prime}, \mathbf{p}^{\prime})^{-1}}{\sum\limits_{j=1}^{n}Dist(\mathbf{x}_{j}^{\prime}, \mathbf{p}^{\prime})^{-1}}\cdot\mathbf{x}_{i}$$
+The interpolation weight $\mathbf{w}_{i}$ of data $\mathbf{x}_{i}$ depends on its distance to the hovered place in the projection. Closer data get larger weights. When user hovers right on $\mathbf{x}_{i}^{\prime}$, $\mathbf{w}_{i}$ equals $1$ while all the other weights get $0$. The result equals the original data: $\mathbf{p} = \mathbf{x}_{i}$.
+
+By the interpolation, we aims to infer what kind of data is desired by the user. Then this desired point acts as a high-dimensional lantern, shedding lights on all the other data to indicate their distances. With the lighting metaphor, we encode distance information using the saturation tunnel in HSL color space:
+$$Saturation(\mathbf{x}_{i}^{\prime}) = \max{\{(\alpha d_{i}^{2} + \beta d_{i} + \gamma)^{-1}, 1\}},$$
+$$d_{i} = Dist(\mathbf{x}_{i}, \mathbf{p}), \quad i = 1,2,\cdots n$$
+The data gets high saturation, if it's close to the interpolated point in the original space. The parameters $\alpha,\ \beta$ and $\gamma$ come from the inverse-square law of the lighting model. Empirical values are chosen to accommodate most datasets. When some datum has a large distance distortion, its lights will not be able to illuminate its neighbors in the projection. In contrast, some far away points will be highlighted as the real neighbors. Figure. demonstrates the actual effect. \col{(Figure to be added.)}
+
+In summary, large data points are potentially interesting data with high distortion and inconsistent illumination. With the hints, user hovers around the projection like experiencing an adventure. He holds a lantern to explore unknown structures in the complex data space. Compared to~\cite{DBLP:journals/tvcg/StahnkeDMT16}, this method enables a more smooth and natural perception of distance information.
+
 \subsubsection{Cluster Suggestion}
+Automatic clustering algorithms play an important role in previous works~\cite{DBLP:conf/ieeevast/NamHMZI07}~\cite{DBLP:journals/cgf/LeeKCSP12}~\cite{DBLP:journals/cgf/LiuWTBP15}. Users are given
+
 \subsection{Featured Viewpoints for the Focus}
 \subsubsection{Desirable Local Features}
 \subsubsection{Feature Enhanced Projections}
