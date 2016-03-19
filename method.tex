@@ -25,7 +25,11 @@ The data gets high saturation, if it's close to the interpolated point in the or
 In summary, large data points are potentially interesting data with high distortion and inconsistent illumination. With the hints, user hovers around the projection like experiencing an adventure. He holds a lantern to explore unknown structures in the complex data space. Compared to~\cite{DBLP:journals/tvcg/StahnkeDMT16}, this method enables a more smooth and natural perception of distance information.
 
 \subsubsection{Cluster Suggestion Based on Projected Relationships}
-Automatic clustering algorithms play an important role in previous works~\cite{DBLP:conf/ieeevast/NamHMZI07}~\cite{DBLP:journals/cgf/LeeKCSP12}~\cite{DBLP:journals/cgf/LiuWTBP15}. Users are either given the clustering results, or assisted in toning parameters of the algorithms. However, it's not intuitive to drive the clustering by parameters, since the algorithm is often a black box to users. Besides, it's hard for users to understand causes and details about the clusters, let alone modifying them or discovering new ones. In our method, we decide not to provide global clustering results. Instead, we help users get such findings by analyzing projection clusters. We'll prove that our method has the power to reveal real structures of projection clusters, by
+Automatic clustering algorithms play an important role in previous works~\cite{DBLP:conf/ieeevast/NamHMZI07}~\cite{DBLP:journals/cgf/LeeKCSP12}~\cite{DBLP:journals/cgf/LiuWTBP15}. Users are either given the clustering results, or assisted in toning parameters of the algorithms. However, it's not intuitive to drive the clustering by parameters, since the algorithm is often a black box to users. Besides, it's hard for users to understand causes and details about the clusters, let alone modifying them or discovering new ones.
+
+In our method, we decide not to provide global clustering results. Instead, we suggest an interesting group of data by examining projection clusters. It is based on the fact that, no additional or prior knowledge should be assumed in a free exploration. Users choose their focuses based on what they perceive in the projection. We only help to reveal real structures of the chosen focus. Users can take full control of the clustering process, after they get the local insights.
+
+Basically, lots of clustering algorithms can be applied to identify projection clusters~\cite{DBLP:conf/ieeevast/Kandogan12}. We adopt ~\cite{zhou2012research}
 
 \subsection{Featured Viewpoints for the Focus}
 
