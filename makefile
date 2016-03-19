@@ -24,10 +24,10 @@
 #adjust the following for your purpose
 
 #set the a .dvi name that corresponds to your main .tex file
-DVIFILES = viewpoingchanger.dvi
+DVIFILES = viewpointchanger.dvi
 MAINTEXFILE = $(DVIFILES:.dvi=.tex)
 SUBTEXFILES =
-BIBFILES = viewpoingchanger.bib
+BIBFILES = viewpointchanger.bib
 
 #switch = to # when using ps2pdf in win32 (mingw/msys), i.e. uncomment 2nd line
 #E=\=
@@ -130,7 +130,7 @@ $(MAINTEXFILE) : $(SUBTEXFILES) $(BIBFILES)
 	"-dColorImageFilter$E/FlateEncode" \
 	"-dGrayImageFilter$E/FlateEncode" \
 	"-dMonoImageFilter$E/FlateEncode" \
-	$< viewpoingchanger.pdf
+	$< viewpointchanger.pdf
 
 #				$(PDFLATEX) $<
 
@@ -146,12 +146,12 @@ $(MAINTEXFILE) : $(SUBTEXFILES) $(BIBFILES)
 	"-dMonoImageFilter=/FlateEncode" \
 	"-dDownsampleGrayImages=false" \
 	"-dDownsampleColorImages=false" \
-	$< viewpoingchanger.pdf
+	$< viewpointchanger.pdf
 #                               $(PDFLATEX) $<
 
 # cleans anything that can be re-generated automatically, plus emacs backups
 clean:
 				rm -f *.aux *.log *.bbl *.blg *.brf *.cb *.ind *.idx *.ilg	\
-				*.inx *.toc *.out $(DVIFILES) $(PSFILES) viewpoingchanger.pdf *~
+				*.inx *.toc *.out $(DVIFILES) $(PSFILES) viewpointchanger.pdf *~
 
 .PHONY : all pdf ps dvi clean $(MAINTEXFILE)
