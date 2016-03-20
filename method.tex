@@ -27,13 +27,16 @@ In summary, large data points are potentially interesting data with high distort
 \subsubsection{Cluster Suggestion Based on Projected Relationships}
 Automatic clustering algorithms play an important role in previous works~\cite{DBLP:conf/ieeevast/NamHMZI07}~\cite{DBLP:journals/cgf/LeeKCSP12}~\cite{DBLP:journals/cgf/LiuWTBP15}. Users are either given the clustering results, or assisted in toning parameters of the algorithms. However, it's not intuitive to drive the clustering by parameters, since the algorithm is often a black box to users. Besides, it's hard for users to understand causes and details about the clusters, let alone modifying them or discovering new ones.
 
-In our method, we decide not to provide global clustering results. Instead, we suggest an interesting group of data by examining projection clusters. It is based on the fact that, no additional or prior knowledge should be assumed in a free exploration. Users choose their focuses based on what they perceive in the projection. We only help to reveal real structures of the chosen focus. Users can take full control of the clustering process, after they get the local insights.
+In our method, we decide not to provide global clustering results. Instead, we suggest an interesting group of data by examining projection clusters. It is based on the fact that, no additional or prior knowledge should be assumed in a free exploration. Users choose their focuses based on what they perceive. We only help to reveal real structures of the chosen focus. Users can still take full control of the clustering process, after they get the local insights.
 
-Basically, lots of clustering algorithms can be applied to identify projection clusters~\cite{DBLP:conf/ieeevast/Kandogan12}. We adopt ~\cite{zhou2012research}
+Basically, lots of clustering algorithms can be applied to identify projection clusters~\cite{DBLP:conf/ieeevast/Kandogan12}. We adopt a variant of DBSCAN~\cite{zhou2012research} whose parameters are adaptive to the data. We choose DBSCAN because it can efficiently identify clusters in any shape. The self-adaptive parameters make it applicable to most datasets without the need of manual toning. Refer to Figure. for the effect of suggestion. \col{Figure. to be added.} Users can choose a suggested cluster by simply clicking it. Nevertheless, the suggestion only clarifies dominant relationships perceived by the user. It doesn't provide any extra information beyond the projection. If the user doesn't feel satisfied with the suggestion, he can choose his own focus by brushing the data.
 
-\subsection{Featured Viewpoints for the Focus}
+\subsection{Pursuing Featured Projections for the Focus}
+We call a chosen datum the focus point, and call a chosen group the focus group. After some focus is chosen, we generate distortion-free projections to enhance its features. Three features are defined for both kinds of focuses, based on local relationships. Accordingly, three projections are provided to enhance these features by reducing their distortion.
 
-\subsubsection{Desirable Local Features}
+\subsubsection{Defining Local Features}
+As mentioned before, we aim to reduce the distortion of local relationships.
+
 \subsubsection{Feature Enhanced Projections}
 \subsubsection{Subspace Suggestion}
 \subsection{From Focus to Cluster}

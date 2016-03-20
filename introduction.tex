@@ -1,5 +1,13 @@
 \firstsection{Introduction}
 \maketitle
+\col{Outline for introduction (section to be modified):
+\begin{enumerate}[(1)]
+\item Necessity: It's necessary to conduct high-dimensional local data analyses, especially in a projection
+\item Difficulties: Projection is not suitable for local analysis. Users concern about local structures, but distances are distorted while local relationships are weaken or hidden
+\item Previous works and their defects: Two kinds of traditional methods, using other views or manipulating projection dimensions
+\item Goal and contribution: Facilitate local analysis in a projection, by reducing distortions and enhancing local relationships
+\end{enumerate}
+}
 Dimension-reduced projection is widely used for high-dimensional data analysis. It seeks to approximate the original distribution in a low-dimensional space. Such approximation is often globally optimized to make a good overview of the data. But a sole overview cannot show all aspects. Detail analysis is a necessary supplement, as suggested by Shneiderman in his information seeking mantra~\cite{DBLP:conf/vl/Shneiderman96}. However, due to approximation errors, data relationships will inevitably be distorted. The distortions are hard to ignore when it comes to local data. They largely harm the perception of local structures, yet are often transparent to users. Even if distortions are shown in the projection~\cite{DBLP:journals/tvcg/StahnkeDMT16}~\cite{DBLP:journals/ijon/Aupetit07}, users have no means to control their distribution. In general, globally optimized projections make good overviews, but are not suitable for local data analysis.
 %change citation here.
 
