@@ -1,24 +1,40 @@
 \section{Related Work}
 \label{section:relatedwork}
+Out method facilitates local data analysis in high-dimensional data. It adopts projection pursuit to support data exploration, as opposed to dimension-driven exploration methods. We'll briefly introduce related works in the relevant fields.
 
-\subsection{High-Dimensional Local Data Analysis}
-\textbf{Local Preservation and Machine Learning}
-~\cite{DBLP:journals/cg/MartinsCMT14}~\cite{DBLP:journals/cgf/LiuWBP14}~\cite{DBLP:journals/tvcg/StahnkeDMT16}
+\subsection{Data Locality Analysis in Projections}
+Data locality has been extensively studied in high-dimensional data researches. There are roughly two branches, focusing on different aspects.
 
-\textbf{Subspace Cluster Estimation}
-~\cite{DBLP:conf/ieeevast/NamHMZI07}~\cite{DBLP:journals/tsp/CarterRH10}~\cite{DBLP:conf/ieeevast/Kandogan12}~\cite{DBLP:conf/ieeevast/TatuMFBSSK12}~\cite{DBLP:journals/tvcg/YuanRWG13}~\cite{DBLP:journals/cgf/LiuWTBP15}
+The major branch focuses on new projections, aiming to preserve local data relationships. Lots of non-linear projections have been proposed for this purpose, such as Laplacian Eigenmaps (LE)~\cite{DBLP:journals/neco/BelkinN03}, Locally Linear Embedding (LLE)~\cite{roweis2000nonlinear}, Local Tangent Space Alignment (LTSA)~\cite{DBLP:journals/corr/cs-LG-0212008}, etc. These methods fit for data lying on a low-dimensional manifold (e.g. images of faces). But the semantics of dimensions are weakened or lost. Users cannot know in which dimensions the data are similar or different. Hence, these methods are not suitable for general high-dimensional data with meaningful dimensions. In comparison, our method keeps all projections in a linear framework. It helps to explain data relationships in the context of dimensions.
 
-\subsection{Dimension-Driven Projection Exploration}
-\textbf{Dimension Manipulation and Grand Tour}
-~\cite{DBLP:journals/tvcg/NamM13}~\cite{DBLP:journals/tvcg/LehmannT13}~\cite{DBLP:journals/cgf/JeongZFRC09}
-%Define principle component analysis (PCA)
+Another branch aims to reveal distortions in a projection. Martins et al.~\cite{DBLP:journals/cg/MartinsCMT14} examined distortions in different types of projections. They used color mapping to indicate distortion levels, and helped find real neighborhoods with automatic algorithms. Liu et al. took a step~\cite{DBLP:journals/cgf/LiuWBP14} further by analyzing data structures based on distortions. But none of them provide means to correct the distorted relationships. Stahnke et al.~\cite{DBLP:journals/tvcg/StahnkeDMT16} corrected the layout by directly changing point distances. However, such method is too straightforward to support a more in-depth local analysis. We also offer to show and correct distortions in this work. But the correction here is achieved by changing the whole projection. It can reduce distortions for a small neighborhood rather than a single datum.
 
-\subsection{Data-Driven Projection Pursuit}
-\textbf{Projection Pursuit}
-~\cite{DBLP:journals/tc/FriedmanT74}~\cite{cook1995grand}~\cite{DBLP:journals/ivs/SeoS05}~\cite{DBLP:journals/tvcg/JohanssonJ09}~\cite{DBLP:conf/apvis/NhonW14}
+\subsection{Projection Assisted Data Exploration}
+Dimension reduced projections are often used to explore high-dimensional data. They are intuitive overviews, but hard to be changed interactively. Jeong et al.~\cite{DBLP:journals/cgf/JeongZFRC09} allow users to change a projection by updating dimension weights in the PCA algorithm. Nam et al.~\cite{DBLP:journals/tvcg/NamM13} took a step further. They let users directly decide both axes of the projection. More recently, Lehmann et al.~\cite{DBLP:journals/tvcg/LehmannT13} proposed a more intuitive interaction. Users can alter the dimension axes while maintaining an orthogonal mapping. These methods are indeed effective. But users have to go through an exhausting trial-and-error process, since they cannot foresee the effects of changing parameters. Our method allow users to manipulate data and relationships, rather than dimension weights. It's more intuitive and more efficient. Users don't have to search by themselves, but can still get the most insightful views.
+
+In a projection assisted exploration, global clusters are often provided beforehand~\cite{DBLP:journals/tvcg/NamM13}~\cite{DBLP:journals/cgf/LiuWTBP15}. In some other methods~\cite{DBLP:journals/tois/ChenL06}~\cite{DBLP:conf/ieeevast/NamHMZI07}~\cite{DBLP:conf/ieeevast/TatuMFBSSK12}, users are able to participate in the automatic clustering process. But in either way, users don't fully understand the given clusters. It's hard for them to modify the results, let alone discovering more hidden clusters. Yuan et al.~\cite{DBLP:journals/tvcg/YuanRWG13} proposed a hierarchical subspace exploration, which is the most relevant to our method. They allow users to analyze a local subset in different subspaces. It helps to discover hidden local clusters. However, they did not provide any guidance for subspace selection. Besides, the lack of context makes it hard to modify the local data.
+\note{
+	\textbf{Subspace Cluster Estimation}
+	\note{~\cite{DBLP:journals/tsp/CarterRH10}}%Intrinsic Dimension
+	~\cite{DBLP:conf/ieeevast/Kandogan12}%Just-in Time
+	~\cite{DBLP:journals/tvcg/YuanRWG13}%Subspace Cluster
+}
+
+\subsection{Feature Driven Projection Selection}
+Projection pursuit~\cite{DBLP:journals/tc/FriedmanT74}~\cite{cook1995grand} is a well-known technique for generating interesting projections. The rank-by-feature framework~\cite{DBLP:journals/ivs/SeoS05} is a variant of it to rank existing projections according to feature strengths. Various kinds of metrics~\cite{DBLP:conf/ieeevast/AlbuquerqueEM11} are defined to measure different features, including class separation~\cite{DBLP:journals/cgf/SipsNLH09}~\cite{DBLP:journals/cgf/SedlmairTMT12}, clustering / outliering~\cite{DBLP:conf/ieeevast/TatuAESTMK09}~\cite{DBLP:journals/tvcg/JohanssonJ09}, and more complex topological properties~\cite{DBLP:conf/infovis/WilkinsonAG05}. They are usually applied to help analyze a large group of scatterplots~\cite{DBLP:conf/apvis/NhonW14}~\cite{DBLP:conf/ieeevast/AnandWN12}. But it's hard to use them to generate new projections in projection pursuit, due to computation costs.
+\note{
+~\cite{DBLP:conf/infovis/WilkinsonAG05}%Scagnostics
+~\cite{DBLP:conf/ieeevast/AlbuquerqueEM11}%quality measures
+~\cite{DBLP:conf/ieeevast/TatuAESTMK09}%combining automatic analysis
+~\cite{DBLP:journals/cgf/SipsNLH09}%class consistency
+~\cite{DBLP:journals/cgf/SedlmairTMT12}%class separation
+~\cite{DBLP:journals/tvcg/JohanssonJ09}%combination of metrics
+~\cite{DBLP:conf/apvis/NhonW14}%scagexplorer
+~\cite{DBLP:conf/ieeevast/AnandWN12}%random projection
 
 \textbf{Projection Pursuit for Classification}
-~\cite{DBLP:journals/cgf/SipsNLH09}~\cite{DBLP:conf/ieeevast/ChooLKP10}~\cite{DBLP:conf/ieeevast/TatuAESTMK09}~\cite{DBLP:journals/cgf/SedlmairTMT12}~\cite{DBLP:conf/ieeevast/AlbuquerqueEM11}
+~\cite{DBLP:conf/ieeevast/ChooLKP10}%iVisClassifier
+}
 
 \textbf{Targeted Projection Pursuit}
 ~\cite{DBLP:journals/tvcg/JoiaCCPN11}~\cite{DBLP:conf/ieeevast/BrownLBC12}~\cite{DBLP:journals/tvcg/Gleicher13}~\cite{DBLP:journals/tvcg/HuBMHNL13}
