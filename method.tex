@@ -43,13 +43,14 @@ Note that if we replace the focus point with the center of data, the optimizatio
 
 \subsubsection{Featured Local Relationships}
 For a focus group, we first examine what kinds of relationships are of interest in the local analysis. Since relationships are defined based on distances, we can take a look at the distance matrix. Given the group, the distance matrix of all data is divided into three parts (see Figure~\ref{fig:local_relationships}). The first part describes distances between group members. The second part is about distances between the group and the other data. The last part describes distances among the context data. Since the last part has nothing to do with the focus, we simply ignore it. For the remaining parts, we consider the chosen data to be either 'similar' or 'dissimilar'.
-
+\note{
 \begin{figure}[htbp]
 \centering
   \includegraphics[width=1\linewidth]{images/case.eps}% 1\linewidth
   \caption{Car Data: Reducing local distortion}
 \label{fig:local_relationships}
   \end{figure}
+  }
 
 By revealing the similarities among group members, we show users in which aspects the data are most similar. It helps to comprehend why these data gather into a cluster in the projection. Enhancing dissimilarities, on the other hand, tells about the major differences among group members. Moreover, if there are sub-clusters within the group, the differences among them will be more prominent. This can reveal hidden local relationships.  Similarities between the group and the others is not of interest, as far as we are concerned. In contrast, by enhancing the dissimilarities, we can show why this group is different from the others. The idea resembles that of Linear Discriminant Analysis (LDA), expect that we did not regard the other data as a same class. In summary, three types of relationships are found most informative in the local analysis. We call them intra-group similarity, intra-group dissimilarity and inter-group dissimilarity respectively.
 
