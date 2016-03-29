@@ -42,7 +42,14 @@ $$\max_{\mathbf{A}}  \sum\limits_{i=1}^{n}Dist(\mathbf{PA}, \mathbf{x}_{i}^{\pri
 Note that if we replace the focus point with the center of data, the optimization will directly lead to PCA projection. In other words, PCA reduces global distortion by reducing the distortion of the average datum. In turn, we can see the problem as a 'center-shifted' PCA. The shifted center has the lowest distance distortion (see Figure.). \col{(Figure to be added.)} As a result, the neighborhood around the focus is more accurate. Compared to the simple correction used in~\cite{DBLP:journals/tvcg/StahnkeDMT16}, our linear projection can help maintain a consistent mental model of the data shape.
 
 \subsubsection{Featured Local Relationships}
-For a focus group, we first examine what kind of relationships are of interest in the local analysis. Since relationships are defined based on distances, we can take a look at the distance matrix. Given a focus, the distance matrix of all data is divided into three parts (see Figure. ). \col{(Figure to be added.)} The first part describes distances between group members. The second part is about distances between the group and the other data. The last part describes distances among the other data. Since the last part has nothing to do with the focus, we simply ignore it. For the remaining parts, we consider the chosen data to be either 'similar' or 'dissimilar'.
+For a focus group, we first examine what kinds of relationships are of interest in the local analysis. Since relationships are defined based on distances, we can take a look at the distance matrix. Given the group, the distance matrix of all data is divided into three parts (see Figure~\ref{fig:local_relationships}). The first part describes distances between group members. The second part is about distances between the group and the other data. The last part describes distances among the context data. Since the last part has nothing to do with the focus, we simply ignore it. For the remaining parts, we consider the chosen data to be either 'similar' or 'dissimilar'.
+
+\begin{figure}[htbp]
+\centering
+  \includegraphics[width=1\linewidth]{images/case.eps}% 1\linewidth
+  \caption{Car Data: Reducing local distortion}
+\label{fig:local_relationships}
+  \end{figure}
 
 By revealing the similarities among group members, we show users in which aspects the data are most similar. It helps to comprehend why these data gather into a cluster in the projection. Enhancing dissimilarities, on the other hand, tells about the major differences among group members. Moreover, if there are sub-clusters within the group, the differences among them will be more prominent. This can reveal hidden local relationships.  Similarities between the group and the others is not of interest, as far as we are concerned. In contrast, by enhancing the dissimilarities, we can show why this group is different from the others. The idea resembles that of Linear Discriminant Analysis (LDA), expect that we did not regard the other data as a same class. In summary, three types of relationships are found most informative in the local analysis. We call them intra-group similarity, intra-group dissimilarity and inter-group dissimilarity respectively.
 
@@ -72,6 +79,8 @@ Here, $\mathbf{a}_{i}$ is the projected unit vector of dimension $d_{i}$. Its sq
 \end{aligned}
 \end{equation*}
 The sum is called the \textbf{subspace score}. It indicates how strong the chosen subspace is related to the features. The threshold $R$ is 0.75 by default, cutting down at least $25\%$ redundant dimensions. Users are informed of the weights at any time. They can change $R$ to include or exclude dimensions. In the remaining subspace, we get the final result via a second-time projection pursuit. The refined projection will be easier to interpret with only the most featured dimensions. Nevertheless, users can always decide whether to accept the original results, or run an easierxtra subspace suggestion.
+
+\note{related to rank-by-feature}
 
 \subsection{Modifying the Focus}
 For a focus point, a distortion reduced projection is the final step. But for a focus group, it still needs to be modified. The featured projections support this task, by revealing the local insights.
