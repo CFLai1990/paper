@@ -39,6 +39,13 @@
 %% with other math-related packages, you may want to disable it.
 
 %% This turns references into clickable hyperlinks.
+%% If you are submitting a paper to a conference for review with a double
+%% blind reviewing process, please replace the value ``0'' below with your
+%% OnlineID. Otherwise, you may safely leave it at ``0''.
+\onlineid{234}
+\newcommand{\note}[1]{\iffalse #1 \fi}
+\newcommand{\col}[1]{{\color{blue}{#1}}}
+\note{
 \usepackage[bookmarks,backref=true,linkcolor=black]{hyperref} %,colorlinks
 \hypersetup{
   pdfauthor = {},
@@ -57,12 +64,7 @@
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \hbadness=10000
-%% If you are submitting a paper to a conference for review with a double
-%% blind reviewing process, please replace the value ``0'' below with your
-%% OnlineID. Otherwise, you may safely leave it at ``0''.
-\onlineid{234}
-\newcommand{\note}[1]{\iffalse #1 \fi}
-\newcommand{\col}[1]{{\color{blue}{#1}}}
+}
 
 %% declare the category of your paper, only shown in review mode
 \vgtccategory{Research}
