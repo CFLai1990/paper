@@ -1,5 +1,6 @@
 \firstsection{Introduction}
 \maketitle
+\note{
 \col{Outline for introduction (section to be modified):
 \begin{enumerate}[(1)]
 \item Necessity: It's necessary to conduct high-dimensional local data analyses, especially in a projection
@@ -8,7 +9,50 @@
 \item Goal and contribution: Facilitate local analysis in a projection, by reducing distortions and enhancing local relationships
 \end{enumerate}
 }
-Dimension-reduced projection is widely used for high-dimensional data analysis. It seeks to approximate the original distribution in a low-dimensional space. Such approximation is often globally optimized to make a good overview of the data. But a sole overview cannot show all aspects. Detail analysis is a necessary supplement, as suggested by Shneiderman in his information seeking mantra~\cite{DBLP:conf/vl/Shneiderman96}. However, due to approximation errors, data relationships will inevitably be distorted. The distortions are hard to ignore when it comes to local data. They largely harm the perception of local structures, yet are often transparent to users. Even if distortions are shown in the projection~\cite{DBLP:journals/tvcg/StahnkeDMT16}~\cite{DBLP:journals/ijon/Aupetit07}, users have no means to control their distribution. In general, globally optimized projections make good overviews, but are not suitable for local data analysis.
+
+(1) Defects of a projection: distortions of the neighborhood, weakened or hidden local relationships.
+(2) Users could have focuses when seeing a projection. It's necessary to conduct a local analysis.
+(3) Manifold learning: they seek to preserve the locality for each single point, but still too hard, and probably not necessary. Besides, they missed the dimensional context when using a non-linear mapping.
+(4) Enhance a focus in the projection: it not only alleviates the burden of projections, but is more targeted and more efficient in using the display space. We only give users what they want. There should be a separation between the focus and the context. It's always difficult to strike a balance among all data.
+}
+Dimension-reduced projection is widely used for high-dimensional data analysis. It seeks to approximate the original data distribution in a low-dimensional space. Such approximation is often a global one, that improves the overall mapping quality by striking a balance among all data. Principle Component Analysis (PCA) and the Multidimensional Scaling (MDS) are two well-known examples of global projections. They usually makes good overviews. However, it's impossible to preserve all information without any loss. Projection distortion is a classic case of such loss. Inaccurate data distances will lead to unfaithful interpretations of data relationships. The distortion gets more severe when data size or dimensionality increases. As a result, global projections become low-efficient when displaying large and complex datasets.
+
+Nevertheless, it's not always necessary to take into account all data in a projection. The user may have a point of interest (POI) with prior knowledge, or is simply attracted by an interesting local region in the overview. He may wish to observe the POI more precisely, while not so concerned about the other data. But the fact is, users are often not aware of distortions. They have no idea which part of the projection is more accurate, and easily get misguided. Even when distortions are displayed~\cite{DBLP:journals/ijon/Aupetit07}~\cite{DBLP:journals/cgf/LiuWBP14}, there are no means for users to control them. Thus, it's hard for a sole overview to fulfill analytic tasks regarding various kinds of local data.
+
+Lots of methods have been proposed to facilitate local analyses in projections. In the machine learning field, researchers believe that most data lie on a low-dimensional manifold. They try to capture localities on the manifold, and maintain them in the projection as much as possible~\cite{DBLP:journals/neco/BelkinN03}~\cite{roweis2000nonlinear}~\cite{DBLP:journals/corr/cs-LG-0212008}. Such methods are effective in preserving local neighborhoods, but they tend to ignore semantics of data dimensions. It makes them unsuitable for general data explorations, where dimensional analyses are quite important. In the visualization field, a simple strategy is to conduct local analysis in another view. But the frequent view switching and linking largely hinders a smooth exploration. More delicate methods allow users to manually alter the projection~\cite{DBLP:journals/cgf/JeongZFRC09}~\cite{DBLP:journals/tvcg/NamM13}~\cite{DBLP:journals/tvcg/LehmannT13}. However, users have to search blindly in the parameter space. It's difficult for them to improve the projection to enhance a certain POI.
+
+Given all these efforts made to improve the global projection, it's necessary to reconsider the problem. It consumes both time and the display space to accommodate all data in a projection. But the result becomes suboptimal when data size increases. Moreover, once the results cannot meet users' needs, all efforts will be wasted. In fact, no global projection can satisfy the ever-changing local analysis requirements. But if we know the POI from the user in advance, perhaps we can use the resources more wisely. The projection can pay full attention to preserve features of the POI, instead of worrying about the unconcerned data. Projection quality will also get promoted when fewer data compete for the display space. Yuan et al.~\cite{DBLP:journals/tvcg/YuanRWG13} use a similar strategy to organize subspace explorations. In their work, data subset chosen by the user is analyzed in a separate local projection. POI information is better preserved without being interfered by the others. The method we would like to propose here, also falls into the same category. However, we focus more on local data analysis, rather than subspace mining.
+
+In this paper, we propose an interactive method, that helps customize a linear projection to facilitate the analysis of user-defined local data. Specifically, we allow user to define a focus, i.e. some interested local data in a projection. Then we offer multiple ways to alter the projection, to either reduce local distortions, or enhance different aspects of the focus. The other data are displayed as context information. Based on the localized projections, we further reveal subspaces where the focus is most featured. It helps to interpret the focus in the context of dimensions. In addition, various means are provided to support the data exploration at different stages. Users are assisted to discover, analyze and modify the focuses. Compared to the global projections, our method is more adaptive to the changes of local analytic tasks. Users are able to transfer seamlessly between different local analyses, while always supplied with high-quality and informative projections.
+
+In summary, our contributions include:
+\begin{itemize}
+\item Given a piece of local data, we propose a method to customize a linear projection to enhance its features.
+\item Our method supports an interactive high-dimensional data exploration, based on seamless local analyses. Users are assisted to discover, analyze and modify the potentially valuable local data.
+\end{itemize}
+
+The remainder of this paper is structured as follows. In the next section, we briefly review the related literature. Section~\ref{section:overview} gives an overview on the proposed method based on the exploration process it supports. Then we elaborate each part of the method in detail in Section~\ref{section:method}. Section~\ref{section:casestudy} presents case studies to demonstrate the effectiveness of our method. In session~\ref{section:discussion}, we have a discussion about weaknesses and potential improvements. At last, we end this paper with the conclusions.
+
+\note{
+
+What if we know the POI in advance, and use the resources more efficiently?
+
+The other data are kept as the context. That's where interactive techniques come in. in this work, we enable users to
+
+Yuan et al.~\cite{DBLP:journals/tvcg/YuanRWG13} let users specify their interested data subset. The chosen subset is then isolated from the other data, and displayed in a separate MDS. The local projection serves well for analyzing the POI. But distortions and local relationships are not studied thoroughly.
+
+Yuan et al.~\cite{DBLP:journals/tvcg/YuanRWG13} proposed a creative solution that promotes subspace explorations. Users can separate the POI data and project them in a dimensional subspace.
+
+
+In fact, no global projection can satisfy the ever-changing local analysis requirements. Efforts made to generate the projection are wasted, once the results cannot meet users' needs. On the other hand, it consumes both time and the display space to accommodate all data in a projection. If we know the POI in advance, we can use these resources more efficiently, by paying more attention to preserve the POI information.
+
+In that circumstance, it's a reasonable choice to enhance POI information, even at the cost of the others. But information loss like the distortions are often transparent to users. Even they are displayed~\cite{DBLP:journals/ijon/Aupetit07}~\cite{DBLP:journals/cgf/LiuWBP14}, there is no means for users to control the distortions.
+
+As suggested by Shneiderman in his information seeking mantra~\cite{DBLP:conf/vl/Shneiderman96}, detail analysis is  Besides,
+Moreover, such distortions are usually transparent to users. unpredictable
+projection distortions are inevitable. Distances shown in the projection are probably inaccurate, leading to an unfaithful interpretation of data relationships.
+
+Such approximation is often globally optimized to make a good overview of the data. But a sole overview cannot show all aspects. Detail analysis is a necessary supplement, as suggested by Shneiderman in his information seeking mantra~\cite{DBLP:conf/vl/Shneiderman96}. However, due to approximation errors, data relationships will inevitably be distorted. The distortions are hard to ignore when it comes to local data. They largely harm the perception of local structures, yet are often transparent to users. Even if distortions are shown in the projection~\cite{DBLP:journals/tvcg/StahnkeDMT16}~\cite{DBLP:journals/ijon/Aupetit07}, users have no means to control their distribution. In general, globally optimized projections make good overviews, but are not suitable for local data analysis.
 %change citation here.
 
 One way to alleviate this problem, is to observe the data in a different perspective. Some previous works~\cite{DBLP:journals/cgf/JeongZFRC09}~\cite{DBLP:journals/tvcg/NamM13}~\cite{DBLP:journals/tvcg/LehmannT13} allow users to change the projection by adjusting dimension weights. It helps to clarify detailed structures and find out more useful information. To help build a targeted analysis, featured clusters are often provided beforehand~\cite{DBLP:journals/tvcg/NamM13}~\cite{DBLP:journals/cgf/LiuWTBP15}. But users know nothing about the given clusters. They have to solve their puzzles by manually searching the enormous data space. It's a blinded and exhausting process, where users have no clue how to steer the dimensions to get a better view. Even if interesting projections are found, it's hard to explain or assess them without distortion information. There is no guarantee that local structures will be shown more precisely in the new perspective.
@@ -27,8 +71,5 @@ In summary, our contributions include:
 \item We propose a data-based interactive exploration method. Users are able to steer the exploration efficiently, by focusing on local data analysis, rather than dimension toning.
 \end{enumerate}
 
-The remainder of this paper is structured as follows. In the next section, we briefly review the related literature. Section~\ref{section:overview} gives an overview on the proposed method based on the exploration process. Then we elaborate each part of our method in detail in Section~\ref{section:method}. Section~\ref{section:casestudy} presents case studies to demonstrate the effectiveness of our method. In session~\ref{section:discussion}, we have a discussion about weaknesses and potential improvements of our method. At last, we end this paper with the conclusions.
-
-\note{
 Nevertheless, local analysis is not only necessary, but also an efficient way to explore high-dimensional data. On one hand, a sole overview cannot show all aspects.\note{especially when the dimensionality is high.} After a quick glance, users tend to pick up some local structure (e.g. clusters, outliers) and go into details. It helps them fully understand the data and discover more useful information. On the other hand, featured local data are good breakthrough points for an efficient exploration. Traditional methods~\cite{DBLP:journals/tvcg/NamM13}~\cite{DBLP:journals/tvcg/LehmannT13} allow users to change the projection by adjusting dimensions. But such exploration is blind and exhausting, since the data space is huge while users have no clue where to go. Compared to dimensions, data features are easier to perceive and explain. That's why dimension-based explorations often provide featured clusters as start points~\cite{DBLP:journals/tvcg/NamM13}~\cite{DBLP:journals/cgf/LiuWTBP15}. It's also the spirit behind feature-based projection mining techniques, such as projection pursuit~\cite{DBLP:journals/tc/FriedmanT74} and the rank-by-feature framework~\cite{DBLP:journals/ivs/SeoS05}.
 }

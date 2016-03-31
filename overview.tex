@@ -1,5 +1,7 @@
 \section{Overview}
 \label{section:overview}
+
+\note{
 \col{Outline for overview:
 \begin{enumerate}[(1)]
 \item Reducing local distortion
@@ -7,6 +9,9 @@
 \item Workflow
 \end{enumerate}
 }
+
+In this work, we propose local featured projections, to facilitate the analyses of user-defined focuses, to facilitate high-dimensional local data analysis. These projections
+
 In this work, we propose to steer high-dimensional data exploration via local analyses in linear projections. To facilitate the analysis, we help to reduce local distortions, and enhance local relationships. In this section, we first clarify the concept of distortion reduction and relationship enhancement. Then we give an overview of the interactive exploration process supported by the locally optimized projections.
 
 \subsection{Local Distortion Reduction}
@@ -16,27 +21,17 @@ By 'relationship', we refer to a relative concept of distance, i.e. 'close' or '
 
 In contrast, reducing distortion of the interested relationship can support a more targeted analysis. For example, when we talk about two objects being similar, we tend to ignore their differences temporally and vice versa. We believe that distortion reduction should be built upon certain analytic targets, namely the local data and relationships. It is the key to revealing hidden local features. That's the reason we provide two different types of distortion reduction, for different purposes. In fact, we will prove that distance distortion is a special case of relationship distortion. Both goals can actually be achieved in the same framework.\note{ Specifically, we allow users to focus on a data subset to accommodate relationships in different ranges. In addition, projection pursuit is applied to enhance relationships in different subspaces.} More details will be introduced in Section~\ref{section:method}.
 
-\ifx
-\begin{figure*}[htb]
-\centering
-\includegraphics{images/Pipeline.eps}
-\caption{Sample illustration.}
-\end{figure*}
-\else
-\begin{figure*}[htbp]
-\centering
-  \includegraphics[width=1\linewidth]{images/Pipeline.eps}% 1\linewidth
-  \caption{The overview of delivery system.}
-\label{fig:workflow}
-  \end{figure*}
-  \fi
-
 \subsection{Workflow}
+}
+
+In this work, we aim to facilitate high-dimensional local data analysis in linear projections. Generally, we let the user specify his focus in any projection, and customize the projection for a better analysis regarding the focus. We propose an interactive exploration scheme, with various kinds of techniques to help the user find, analyze, modify, and compare multiple focuses. To be specific, our method supports a four-step exploration process (Figure~\ref{fig:workflow}):
+\note{
 Our method promotes an efficient high-dimensional data exploration, by facilitating distortion-free local analysis. It not only helps to maintain a faithful perception, but aims to enhance local features for better information mining. To be specific, the exploration contains four steps (see Figure~\ref{fig:workflow}):
+}
 \begin{enumerate}[Step. 1:]
- \item First, we present a globally optimized projection as an overview of the data. For the given projection, we help the user find a piece of interesting local data. Projection distortion and cluster suggestions are displayed to indicate potential outliers and clusters. The data chosen by user is called a \emph{focus}, meaning that it's the current focus in local analysis.
- \item After some focus is chosen, we find its most featured projections for a targeted analysis. By 'features', we refer to three kinds of local data relationships we defined. Projections are optimized to show these relationships with the least distortion. Based on the projection, we suggest a dimensional subspace that's most related to the feature. Its dimensions help to explain causes of the relationships.
- \item Since the focus is chosen in a projection, it could be a false cluster or missing some important pieces. We provide suggestions to help shape the focus into a more consistent and complete cluster. Whenever the focus is changed, the featured projections will also be updated. The process then returns to Step 2. This loop goes on until the user fully understands structures of the focus, and acquires a satisfactory cluster. After that, he can save the results and transfer his attention to another focus, returning to step 1.
- \item When some informative local data is found, the user can store it in the focus list for a further analysis. A 'projection map' is provided for featured projections of all focuses. It helps to compare different focuses, and navigate the high-dimensional exploration.
+ \item \textbf{Focus Search}: First, we present a global projection as the overview (Figure~\ref{fig:workflow}(a)). In the given projection, we help the user find an interesting piece of local data. We assume a datum interesting if its distances to others has been distorted. We consider a group of data interesting if they appear as a cluster. Hence, we display distance distortions and projection clusters respectively, to suggest an interesting datum or a potential cluster (Figure~\ref{fig:workflow}(b)). The data chosen by the user, either a point or a group, is called a focus.
+ \item \textbf{Enhancing Features of the Focus}: After some focus is chosen, we customize the projection to enhance its features. By features, we refer to three kinds of featured relationships we find most informative in the local analysis (Figure~\ref{fig:workflow}(d)). Different relationships serve different analytic purposes. After the feature enhancement, we reveal dimensions that are most related to the feature. Based on that, we suggest a subspace that can help interpret causes of the local relationships.
+ \item \textbf{Focus Modification}: When the focus is a data group chosen in the projection, it could be a false cluster or missing some important pieces. The focus-enhanced projections provide insights from multiple aspects. They may reveal truths that could not be found in the previous projection, like sub-clusters, outliers, etc. We provide means to help shape the focus into a more consistent and complete group. Whenever the focus is updated, the focus-enhanced projections will also be updated. The process returns to Step~2. This loop goes on until the user fully understands the data in focus, or acquires a featured cluster. After that, he can save the results and transfer his attention to another focus, returning to Step~1.
+ \item \textbf{Focus Comparison}: When some valuable local data is found, the user can store it in the focus list for a further analysis (Figure~\ref{fig:workflow}(f)). We also provide a 'Projection Map', which contains projections of all focuses in the list. The map helps to compare different focuses, and navigate the high-dimensional exploration.
 \end{enumerate}
-The whole process is all about clarifying data relationships and figuring out the causes. Users never have to worry about configuring the projection. They are able to transfer seamlessly between different local analyses. In the next section, we'll introduce in detail how we support such exploration in each step.
+In the exploration process, users never have to worry about configuring the projections. They are able to transfer seamlessly between different local data. The generated layouts not only show hidden local relationships, but disclose their causes in the context of dimensions.  In the next section, we'll introduce in detail how we support the above exploration in each step.
