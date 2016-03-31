@@ -2,19 +2,19 @@
 \label{section:relatedwork}
 Out method facilitates local data analysis in linear projections. We adopt the strategy of projection pursuit to find desirable projections, as opposed to dimension-driven exploration methods. We'll briefly introduce related works in the relevant fields.
 
+\begin{figure*}[htbp]
+\centering
+  \includegraphics[width=1\linewidth]{images/new_pipeline.eps}% 1\linewidth
+  \caption{Overview: High-dimensional data exploration supported by our method. First, we present a global projection (a) as the overview. Then we provide suggestions (b) to help the user find an interesting piece of local data. After some data are chosen as the focus (c), we enhance its features in different aspects (d) in the linear projection. The subspace related to the feature is also revealed (e). The user can either modify the focus, or store it in the focus list (f) for a further study. We provide a projection map, where the stored  focuses can be compared based on their featured projections.}
+\label{fig:workflow}
+  \end{figure*}
+
 \subsection{Data Locality Analysis in Projections}
 Data locality has been extensively studied in high-dimensional data researches. There are roughly two branches, focusing on different aspects.
 
 The major branch aims to improve global projections, focusing on preserving data localities. Lots of non-linear projections have been proposed for this purpose, such as Laplacian Eigenmaps (LE)~\cite{DBLP:journals/neco/BelkinN03}, Locally Linear Embedding (LLE)~\cite{roweis2000nonlinear}, Local Tangent Space Alignment (LTSA)~\cite{DBLP:journals/corr/cs-LG-0212008}, etc. These methods fit for data lying on a low-dimensional manifold (e.g. images of faces). But the semantics of dimensions are weakened or lost. Users cannot know in which dimensions the data are similar or different. Hence, these methods are not suitable for general high-dimensional data with meaningful dimensions. In comparison, our method keeps all projections in a linear framework. It helps to explain data relationships in the context of dimensions.
 
 Another branch aims to reveal distortions in a projection. Martins et al.~\cite{DBLP:journals/cg/MartinsCMT14} examined distortions in different types of projections. They used color mapping to indicate distortion levels, and helped find real neighborhoods with automatic algorithms. Liu et al. took a step~\cite{DBLP:journals/cgf/LiuWBP14} further by analyzing data structures based on distortions. But none of them provide means to correct the distorted relationships. Stahnke et al.~\cite{DBLP:journals/tvcg/StahnkeDMT16} proposed a simple correction by directly changing point distances. However, such method is too straightforward to support a more in-depth local analysis. In this work, we also offer to show and correct distance distortions. But the correction here is achieved by changing the whole projection. It can reduce distortions for a small neighborhood rather than a single datum.
-
-\begin{figure*}[htbp]
-\centering
-  \includegraphics[width=1\linewidth]{images/new_pipeline.eps}% 1\linewidth
-  \caption{Overview of the proposed exploration process.}
-\label{fig:workflow}
-  \end{figure*}
 
 \subsection{Projection Assisted Data Exploration}
 Dimension reduced projections are often used to explore high-dimensional data. They are intuitive overviews, but hard to be changed interactively. Jeong et al.~\cite{DBLP:journals/cgf/JeongZFRC09} allow users to change a projection by updating dimension weights in the PCA algorithm. Nam et al.~\cite{DBLP:journals/tvcg/NamM13} took a step further. They let users directly decide dimension components in a projection. Beyond parameter tuning, Lehmann et al.~\cite{DBLP:journals/tvcg/LehmannT13} proposed a more intuitive interaction. Users can alter the dimension axes while maintaining an orthogonal mapping. These methods are indeed effective. But users have to go through an exhausting trial-and-error process, since they cannot foresee the effects of dimension changes. Our method allows users to specify local data and relationships, rather than dimension weights. It's more intuitive and more efficient. Users don't have to search by themselves, but can still get insightful projections.

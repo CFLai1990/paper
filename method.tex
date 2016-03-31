@@ -1,26 +1,35 @@
-\section{High-dimensional Local Data Analysis in Locally Optimized Projections}
-As described in the workflow, the proposed method supports a four-step exploration. In this section, we'll elaborate details of our method in each step of the exploration process.
+\section{High-dimensional Local Data Analysis in Locally Enhanced Projections}
+As described in the overview, the proposed method supports a four-step exploration. In this section, we'll elaborate details of our method in each step of the exploration process.
 \label{section:method}
 \subsection{Discovering Interesting Local Focus}
-Following Shneiderman's suggestion~\cite{DBLP:conf/vl/Shneiderman96}, we first provide the PCA projection as an overview of the data. Then we help the user find an interesting subset as the focus of subsequent local analysis.
+Shneiderman has suggested in his information seeking mantra~\cite{DBLP:conf/vl/Shneiderman96}: "Overview first, then detail on demand". Following the suggestion, we first provide the PCA projection as an overview of the data. Then we help the user find an interesting subset as the focus of subsequent local analysis.
 
-In a projection, there are two situations where some local data is considered interesting. The first case is about distance distortion. Incorrect distances result in false neighborhoods. Closely distributed data may be far away in the original space and vice versa. Data involved in a distorted local area is regarded informative in the projection. It's also the basic idea in previous works concerning about data locality~\cite{DBLP:journals/cg/MartinsCMT14}~\cite{DBLP:journals/tvcg/StahnkeDMT16}. But such analysis only focuses on each datum at a time. It's hard to describe a group of data in this context. That's why we consider the second type, where the data is involved in some featured relationships, like being an outlier or a cluster. The relationship may have been weakened (e.g. a false cluster), but it's still strong enough to appear in the current projection. Hence, it makes a reasonable focus for a further study. Besides, it's suitable to describe a group of data in the context of relationships, rather than distance errors.
+In a projection, there are two situations where some local data is considered interesting. The first case is about distance distortion. Incorrect distances result in false neighborhoods. Closely distributed data in the projection may be far away in the original space and vice versa. Data involved in a distorted local area is regarded informative in the projection. It's also the basic idea in previous works concerning about data locality~\cite{DBLP:journals/cg/MartinsCMT14}~\cite{DBLP:journals/tvcg/StahnkeDMT16}. But such analysis only focuses on each datum at a time. It's hard to describe a group of data in this context. That's why we consider the second type, where the data is involved in some featured relationships, like being an outlier or a cluster. The relationship may have been weakened (e.g. a false cluster), but it's still strong enough to appear in the current projection. Hence, it makes a reasonable focus for a further study. Besides, it's suitable to describe a group of data in the context of relationships, rather than distance errors.
 
 To put it simply, distortion analysis focuses more on the neighborhood of a single datum. Relationship analysis promotes the study of a data group. Regarding the two cases, we adopt different means to help the user find an interesting local focus.
 
+\ifx
 \begin{figure}[htbp]
 \centering
-\subfigure[Datum Suggestion]{
+\subfigure[Focus point Suggestion]{
 	\includegraphics[width=0.48\linewidth]{images/suggestion_point.eps}
 }
-\subfigure[Cluster Suggestion]{
+\subfigure[Focus Group Suggestion]{
 	\includegraphics[width=0.46\linewidth]{images/suggestion_group.eps}
 }
-  \caption{Focus Suggestions}
+  \caption{Focus Suggestion: We provide}
 \label{fig:suggestions}
   \end{figure}
+  \else
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1\linewidth]{images/suggestion.eps}
+  \caption{Focus Suggestion: We help the user find an interesting local focus, by making two kinds of suggestions. (a) The focus point suggestion indicates projection distortions. If a datum has large distortions, it will be large in size with a color different from its neighbors. (b) The focus group suggestion simply shows clusters in the projection. We assume a group of data interesting if they appear as a projection cluster.}
+\label{fig:suggestions}
+\end{figure}
+  \fi
 
-\subsubsection{Datum Suggestion Based on Distance Distortion}
+\subsubsection{Focus Point Suggestion Based on Distance Distortion}
 For any given projection, we consider a datum interesting if its distances to other data have been severely distorted. To measure the distortion, we accumulate distance errors for each datum in the projection:
 \begin{equation}
 Error(\mathbf{x}_{i}^{\prime}) = \sum\limits_{j=1}^{n}(Dist(\mathbf{x}_{i}, \mathbf{x}_{j}) - Dist(\mathbf{x}_{i}^{\prime}, \mathbf{x}_{j}^{\prime}))^{2}, i = 1,2,\cdots n
@@ -44,12 +53,12 @@ The data gets high saturation, if it's close to the interpolated point in the or
 
 In summary, large data points are potentially interesting data with high distortion and inconsistent illumination. With the hints, user hovers around the projection like experiencing an adventure. He holds a lantern to explore unknown structures in the complex data space. Compared to~\cite{DBLP:journals/tvcg/StahnkeDMT16}, this method enables a more smooth and natural perception of distance information.
 
-\subsubsection{Cluster Suggestion Based on Projected Relationships}
+\subsubsection{Focus Group Suggestion Based on Projection Clusters}
 Automatic clustering algorithms play an important role in previous works~\cite{DBLP:conf/ieeevast/NamHMZI07}~\cite{DBLP:journals/cgf/LeeKCSP12}~\cite{DBLP:journals/cgf/LiuWTBP15}. Users are either given the clustering results, or assisted in tuning parameters of the algorithm. However, it's not intuitive to drive the clustering by parameters, since the algorithm is often a black box to users. Besides, it's hard for users to understand causes and details about the clusters, let alone modifying them or discovering new ones.
 
 In our method, we decide not to provide global clustering results. Instead, we suggest an interesting group of data by examining projection clusters. It is based on the fact that, no additional or prior knowledge should be assumed in a free exploration. Users choose their focuses based on what they perceive. We only reveal real structures of the chosen focus. Users can still take full control of the clustering process, after they get the local insights.
 
-Lots of clustering algorithms can be applied to identify projection clusters~\cite{DBLP:conf/ieeevast/Kandogan12}. We adopt a variant of DBSCAN~\cite{zhou2012research} whose parameters are adaptive to the data. We choose DBSCAN because it can efficiently identify clusters in any shape. The self-adaptive parameters make it applicable to most datasets without the need of manual tuning. Refer to Figure~\ref{fig:suggestions}(b) for the effect of cluster suggestion. The potential clusters are shown as contours. Users can choose any suggested cluster by simply clicking on it. To be clear, the suggestion only clarifies dominant relationships perceived by the user. It doesn't provide any extra information beyond the projection. If the user doesn't feel satisfied with the suggestion, he can choose his own focus by brushing the data.
+Lots of clustering algorithms can be applied to identify projection clusters~\cite{DBLP:conf/ieeevast/Kandogan12}. We adopt a variant of DBSCAN~\cite{zhou2012research} whose parameters are adaptive to the data. We choose DBSCAN because it can efficiently identify clusters in any shape. The self-adaptive parameters make it applicable to most datasets without the need of manual tuning. Refer to Figure~\ref{fig:suggestions}(b) for the effect of focus group suggestion. The potential clusters are shown as contours around the points. Users can choose any suggested cluster by simply clicking on it. To be clear, the suggestion only clarifies dominant relationships perceived by the user. It doesn't provide any extra information beyond the projection. If the user doesn't feel satisfied with the suggestion, he can choose his own focus by brushing the data.
 
 \subsection{Featured Projections of the Focus}
 We call a chosen datum the focus point, and call a chosen group the focus group. After some focus is chosen, we generate projections to either reduce its distortion, or enhance its local relationships.
@@ -72,7 +81,7 @@ For a focus group, we first examine what kinds of relationships are of interest 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=1\linewidth]{images/enhancement1.eps}
-  \caption{Enhancing featured local relationships}
+  \caption{Enhancing featured local relationships. With a certain focus group, the overall distance matrix can be divided into four sub-matrices~(a). We enhance local relationships (similarity or dissimilarity)~(b), by enlarging or reducing distances in different sub-matrices. Three kinds of projections are generated as the results (c).}
 \label{fig:local_relationships}
   \end{figure}
 
@@ -131,6 +140,6 @@ During the exploration, there will be times when the user needs to store the res
 
 In the focus list, users can store the current focus or retrieve it at any time. Each focus is represented as a node (see Figure. ). Its size denotes the data size. Users can name a focus, or assign it some color. Specially, there is a fixed node called 'All Data'. Applying Expand metric to it will get the global PCA projection.
 
-For every focus in the list, its featured projections are shown as glyphs in the projection map. Different glyphs represent different types of projections, as shown in Figure. \col{(Figure to be added.)} Dimension weights are also displayed to help compare the projections. Clicking on a glyph can retrieve the focus and the corresponding projection. To quantify distances between any two projection, we refer to the manifold learning domain. It has been proved that any two 2D projections lie on the same manifold, which is called the Grassmann manifold. We measure projection distances by geodesic distances on the manifold~\cite{absil2004riemannian}. The map is constructed based on the distance matrix using MDS.
+For every focus in the list, its featured projections are shown as glyphs in the projection map. Different glyphs represent different types of projections, as shown in Figure~\ref{fig:map}. Dimension weights are also displayed to help compare the projections. Clicking on a glyph can retrieve the focus and the corresponding projection. To quantify distances between any two projection, we refer to the manifold learning domain. It has been proved that any two 2D projections lie on the same manifold, which is called the Grassmann manifold. We measure projection distances by geodesic distances on the manifold~\cite{absil2004riemannian}. The map is constructed based on the distance matrix using MDS.
 
-In the projection map, users can compare features of different focuses. For example, two focus groups may have the same reasons for the grouping (i.e. intra-group similarities), while having different inner-group diversities (see Figure.). \col{(Figure to be added.)} It helps to understand different local data in the context of featured dimensions. In addition, users can plan their own high-dimensional tours in this map. A similar idea has been proposed in the TripAdvisor~\cite{DBLP:journals/tvcg/NamM13}, as an extension of the Grand Tour~\cite{asimov1985grand}~\cite{cook1995grand}. But their projections are driven by dimensions without explicit semantics. In comparison, each spot in our map is tightly related to some local data and a certain relationship. It makes the tour more targeted and easier to interpret.
+In the projection map, users can compare features of different focuses. For example, two focus groups may have the same reasons for the grouping (i.e. intra-group similarities), while having different inner-group diversities (see Figure~\ref{fig:map}). It helps to understand different local data in the context of featured dimensions. In addition, users can plan their own high-dimensional tours in this map. A similar idea has been proposed in the TripAdvisor~\cite{DBLP:journals/tvcg/NamM13}, as an extension of the Grand Tour~\cite{asimov1985grand}~\cite{cook1995grand}. But their projections are driven by dimensions without explicit semantics. In comparison, each spot in our map is tightly related to some local data and a certain relationship. It makes the tour more targeted and easier to interpret.
