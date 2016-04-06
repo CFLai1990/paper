@@ -68,7 +68,7 @@ For a focus point, we seek a projection to reduce its accumulated distance disto
 \begin{equation}
 \min Error(\mathbf{P}) = \min_{\mathbf{A}}  \sum\limits_{i=1}^{n}(Dist(\mathbf{P}, \mathbf{x}_{i}) - Dist(\mathbf{PA}, \mathbf{x}_{i}^{\prime}))^{2}
 \end{equation}
-Here the term $\mathbf{A}$ represents the projection matrix. The projected focus point is $\mathbf{P^{\prime}} = \mathbf{PA}$. It can be proved that (refer to the appendix), the problem is equivalent to the following form:
+Here the term $\mathbf{A}$ represents the projection matrix. The projected focus point is $\mathbf{P^{\prime}} = \mathbf{PA}$. It can be proved that, the problem is equivalent to the following form:
 \begin{equation}
 \label{equation:center-shiftedPCA}
 \max_{\mathbf{A}}  \sum\limits_{i=1}^{n}Dist(\mathbf{PA}, \mathbf{x}_{i}^{\prime})^{2}

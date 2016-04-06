@@ -33,14 +33,7 @@ The second cluster (Figure~\ref{fig:food2}(e)) scores high in vitamin A, which i
 
 The third cluster seems rich in vitamin B12. We enhance its inner relationships, going down to a third-level analysis. Again, there is one big cluster with some outliers in the projection (Figure~\ref{fig:food3}(b)). We remove the outliers, and enhance similarities within the cluster. The Compress view (Figure~\ref{fig:food3}(d)) shows a strong pattern that no fiber or vitamin C exists here. The subspace score reaches 0.99. We can safely conclude that these are animal-based foods. In the Expand projection (Figure~\ref{fig:food3}(c)), five dimensions are suggested. The data are very diverse along the axis of lipid, while they separate into two groups in the other four dimensions. They are possibly fishes or red meats. In the overview, the two clusters are very close, yet separable (Figure~\ref{fig:food3}(g), (h)).
 
-\begin{figure}[htbp]
-\centering
-  \includegraphics[width=0.85\linewidth]{images/map_1.eps}% 1\linewidth
-  \caption{USDA Food Data: Four small clusters found in the the exploration are stored in the focus list (a). The projection map helps to compare them based on featured projections. It can be seen that, Compress projections of Cluster 1 and 2 are strongly featured (c, d). Cluster 3-1 and Cluster 3-2 are highly similar in all their projections (e, f, g).}
-\label{fig:map}
-  \end{figure}
-
-In the above process, we've found four small clusters within the initial global cluster. They are Cluster 1 (Figure~\ref{fig:food2}(g)), Cluster 2 (Figure~\ref{fig:food2}(h)), Cluster 3-1 (Figure~\ref{fig:food2}(e)) and Cluster 3-2 (Figure~\ref{fig:food2}(f)). The four clusters seem layered in the overview (Figure~\ref{fig:food2}(i), (j), Figure~\ref{fig:food3}(g), (h)). We store our findings in the focus list, and use the projection map to help compare these data (Figure~\ref{fig:map}). As shown in the map, Cluster 1 and 2 have very prominent features that are strongly related to only a few dimensions (Figure~\ref{fig:map} (c), (d)). It coordinates with findings in Figure~\ref{fig:food2}(g) and Figure~\ref{fig:food3}(d). On the other hand, Cluster 3-1 and Cluster 3-2 show close relations in the map. All three kinds of their projections are placed very closely (Figure~\ref{fig:map} (e), (f), (g)). It also coordinates with our previous finding that they are similar sub-clusters within Cluster 3.
+In the above process, we've found four small clusters within the initial global cluster. They are Cluster 1 (Figure~\ref{fig:food2}(g)), Cluster 2 (Figure~\ref{fig:food2}(h)), Cluster 3-1 (Figure~\ref{fig:food2}(e)) and Cluster 3-2 (Figure~\ref{fig:food2}(f)). The four clusters seem layered in the overview (Figure~\ref{fig:food2}(i), (j), Figure~\ref{fig:food3}(g), (h)). We store our findings in the focus list, and use the projection map to help compare these data (Figure~\ref{fig:map}). As shown in the map, Cluster 1 and 2 have very prominent features that are strongly related to only a few dimensions (Figure~\ref{fig:map} (c), (d)). It coordinates with findings in Figure~\ref{fig:food2}(g) and Figure~\ref{fig:food3}(d). On the other hand, Cluster 3-1 and Cluster 3-2 show close relations in the map. All three kinds projections are placed very closely (Figure~\ref{fig:map} (e), (f), (g)). It also coordinates with our previous finding that they are similar sub-clusters within Cluster 3.
 
 \begin{figure*}[htbp]
 \centering
@@ -62,6 +55,13 @@ In the above process, we've found four small clusters within the initial global 
   \caption{We choose a sub-cluster found in Figure~\ref{fig:food2}(f) to be the new focus. After removing some outliers within the cluster (b), we can see both strong features (d) and interesting inner structures (c) are revealed in the locally enhanced projections. Again, we find two sub-clusters (e, f) within the focus. They seem to be small neighboring clusters in the overview. See Section~\ref{case:food} for more details.}
 \label{fig:food3}
   \end{figure*}
+
+\begin{figure}[htbp]
+\centering
+  \includegraphics[width=0.85\linewidth]{images/map_1.eps}% 1\linewidth
+  \caption{USDA Food Data: Four small clusters found in the the exploration are stored in the focus list (a). The projection map helps to compare them based on featured projections. It can be seen that, Compress projections of Cluster 1 and 2 are strongly featured (c, d). Cluster 3-1 and Cluster 3-2 are highly similar in all their projections (e, f, g).}
+\label{fig:map}
+  \end{figure}
 
  In general, we have found outliers and hierarchical clusters in different levels of locality. Without the featured local projections or the projection map, it's hard for users to discover, interpret, and compare those clusters. In addition, such projections also help to understand the unselected data, and how the focus resembles or differs from them.
 
