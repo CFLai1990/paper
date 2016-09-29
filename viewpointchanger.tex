@@ -1,8 +1,9 @@
-%\documentclass[journal]{vgtc}                % final (journal style)
-\documentclass[review,journal]{vgtc}         % review (journal style)
+\documentclass{vgtc}                          % final (conference style)
+%\documentclass[review]{vgtc}                 % review
 %\documentclass[widereview]{vgtc}             % wide-spaced review
-%\documentclass[preprint,journal]{vgtc}       % preprint (journal style)
-%\documentclass[electronic,journal]{vgtc}     % electronic version, journal
+%\documentclass[preprint]{vgtc}               % preprint
+%\documentclass[electronic]{vgtc}             % electronic version
+\let\ifpdf\relax
 
 %% Uncomment one of the lines above depending on where your paper is
 %% in the conference process. ``review'' and ``widereview'' are for review
@@ -153,7 +154,7 @@
 \input{conclusion.tex}
 
 %% if specified like this the section will be committed in review mode
-\acknowledgments{
+\acknowledgements{
 The authors wish to thank A, B, C. This work was supported in part by
 a grant from XYZ.}
 
