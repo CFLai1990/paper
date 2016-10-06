@@ -1,0 +1,67 @@
+\documentclass{vgtc}
+\usepackage{mathptmx}
+\usepackage{multirow}
+\usepackage{amsmath}
+\title{Appendix}
+\newcommand{\note}[1]{\iffalse #1 \fi} 
+\begin{document}
+\maketitle
+\begin{align*}
+\text{1. }&\text{We examine the k-nearest neighbors of a POI datum named Celica in the Cars dataset. Specifically, each datum has a unique integer ID.}\\ 
+&\text{Let }N_{H}, N_{g}, \text{ and } N_{l} \text{ be the neighborhood set of Celica in the high-dimensional space, the global projection, and the locally enhanced pro-}\\ 
+&\text{jection respectively. We refer to each datum by its ID in the neighborhood sets. We set }k\text{ to 40 and obtain the nieghborhoods as follows:}\\ 
+&\ \ N_{H} = \{352, 316, 374, 350, 318, 375, 319, 265, 351, 266, 378, 376, 345, 377, 333, 332, 317, 349, 271, 292, 331, 379, 356, 357, 353, 310, 315, \\ 
+&\ \ \ \ \ \ \ \ \ \ \ \ 369, 341, 371, 268, 342, 277, 330, 291, 328, 344, 302, 237, 238\}\\ 
+&\ \ N_{g} = \{316, 55, 352, 276, 291, 181, 58, 332, 238, 231, 236, 349, 243, 170, 180, 299, 318, 215, 184, 302, 101, 267, 329, 317, 293, 233, 315, \\ 
+&\ \ \ \ \ \ \ \ \ \ \ \ 319, 235, 195, 139, 183, 374, 350, 144, 300, 149, 264, 351, 333\}\\ 
+&\ \ N_{l} = \{331, 352, 318, 374, 316, 350, 265, 375, 266, 319, 241, 271, 349, 351, 268, 389, 378, 332, 385, 376, 377, 317, 357, 369, 353, 345, 307, \\ 
+&\ \ \ \ \ \ \ \ \ \ \ \ 333, 292, 356, 327, 169, 330, 379, 291, 371, 302, 315, 310, 277\}\\ 
+&\text{The data are odered by their distances to the POI. Higher ranks denote closer distances. Then we measure the neighborhood preserving}\\ 
+&\text{rate by }rate = \frac{N_{H}\bigcap N}{N_{H}}\text{. We varied k from 10 to 40 and get the following results:}
+\end{align*}
+\centering \begin{tabular}{|c|c|c|c|c|}
+\hline
+Rate / k & 10 & 20 & 30 & 40 \\
+\hline
+$N_{H}\bigcap N_{g}$ & 2 & 5	& 8	 & 15\\
+\hline
+$Rate_{g}$ & 0.2 & 0.25	& 0.27	 & 0.375\\
+\hline
+$N_{H}\bigcap N_{l}$ & 9 & 15	& 25 & 34\\
+\hline
+$Rate_{l}$ & 0.9	& 0.75 &	0.83	& 0.85\\ 
+\hline
+\end{tabular}
+\begin{align*}
+\ \ &\text{The locally enhance projection only misses 6 in the 40 neighbors, and restores 9 out of 10 nearest neighbors. It proves the effectiveness of}\\ 
+\ \ &\text{our method in preserving a high-dimensional local neighborhood.}
+\end{align*}
+\note{
+\begin{align*}
+\text{1. The problem }\min_{\mathbf{A}}  \sum\limits_{i=1}^{n}(Dist(\mathbf{P}, \mathbf{x}_{i}) - Dist(\mathbf{PA}, \mathbf{x}_{i}^{\prime}))^{2}\text{ equals to }\max_{\mathbf{A}}  \sum\limits_{i=1}^{n}Dist(\mathbf{PA}, \mathbf{x}_{i}^{\prime})^{2}
+\end{align*}
+\begin{align*}
+\textbf{Proof: }&\text{High-dimensional distances are invariant between the POI point and the other data. Hence, we can denote the term }Dist(\mathbf{P}, \mathbf{x}_{i})\\ 
+&\text{ by a constant }d_{i} \text{. Since }Dist(\mathbf{PA}, \mathbf{x}_{i}^{\prime}) = Dist(\mathbf{PA}, \mathbf{x}_{i}\mathbf{A})\text{, we can denote it by }D_{i}(\mathbf{A})\text{. The problem can be written as:}\\ 
+&\min_{\mathbf{A}}  \sum\limits_{i=1}^{n}(d_i - D_i(\mathbf{A})) = \min_{\mathbf{A}}\sum\limits_{i=1}^{n}(d_i^2+D_i^2(\mathbf{A}) - 2d_i \cdot D_i(\mathbf{A}))\\ 
+&\text{Take a derivative with respect to } D_i(\mathbf{A}) \text{, and we'll get: } Der(D_i(\mathbf{A})) = 2\sum\limits_{i=1}^{n}(D_i(\mathbf{A}) - d_i) = 2\sum\limits_{i=1}^{n}D_i(\mathbf{A}) - 2nd_i\text{.}\\ 
+&\text{In a linear projection, the projected distance is no greater than its high-dimensional conterpart, meaning that: } Der(D_i(\mathbf{A})) \leq 0.\\ 
+&\text{Hence, the problem equals to: }\max_{\mathbf{A}}\ Der(D_i(\mathbf{A})) = \max_{\mathbf{A}}  \sum\limits_{i=1}^{n}D_i(\mathbf{A})\\ 
+\end{align*}
+}
+\begin{align*}
+\text{2. }&\text{We approximate solutions to the three optimization problems in }O(D^3)\text{ time, where D is the dimensionality of data.}\\
+&(1). \max \sum\limits_{\mathbf{x}_{i}^{\prime}, \mathbf{x}_{j}^{\prime} \in G} Dist(\mathbf{x}_{i}^{\prime}, \mathbf{x}_{j}^{\prime})^{2} = \max_{\mathbf{A}} \sum\limits_{\mathbf{x}_{i}, \mathbf{x}_{j} \in G} Dist(\mathbf{x}_{i}\mathbf{A}, \mathbf{x}_{j}\mathbf{A})^{2},\ s.t.\ \mathbf{A^{T}A} = \mathbf{I}\\
+&\text{We approximate the solution by solving: } \max_{\mathbf{A}}\sum\limits_{\mathbf{x}_{j} \in G} Dist(\overline{\mathbf{x}}\mathbf{A}, \mathbf{x}_{j}\mathbf{A})^{2},\ s.t.\ \mathbf{A^{T}A} = \mathbf{I}\text{, which leads to a local PCA projection.}\\ 
+&(2). \min_{\mathbf{A}} \sum\limits_{\mathbf{x}_{i}, \mathbf{x}_{j} \in G} Dist(\mathbf{x}_{i}\mathbf{A}, \mathbf{x}_{j}\mathbf{A})^{2},\ s.t.\ \mathbf{A^{T}A} = \mathbf{I}\\ 
+&\text{Similarly, we approximate the solution by solving: } \min_{\mathbf{A}}\sum\limits_{\mathbf{x}_{j} \in G} Dist(\overline{\mathbf{x}}\mathbf{A}, \mathbf{x}_{j}\mathbf{A})^{2},\ s.t.\ \mathbf{A^{T}A} = \mathbf{I}\\ 
+&(3). \max_{\mathbf{A}} \sum\limits_{\mathbf{x}_{i} \in G} \sum\limits_{\mathbf{x}_{j} \in \bar{G}} Dist(\mathbf{x}_{i}\mathbf{A}, \mathbf{x}_{j}\mathbf{A})^{2},\ s.t.\ \mathbf{A^{T}A} = \mathbf{I}\\ 
+&\text{We approximate the solution by solving: }\max_{\mathbf{A}} \sum\limits_{\mathbf{x}_{j} \in \bar{G}} Dist(\overline{\mathbf{x}}_{G}\mathbf{A}, \mathbf{x}_{j}\mathbf{A})^{2},\ s.t.\ \mathbf{A^{T}A} = \mathbf{I}\\
+&\text{In the approximation, we replace the many-to-many distances with many-to-one distances, allowing the mean data to represent the whole}\\ 
+&\text{group. All the approximations can be sumd up as: } \sum\limits_{\mathbf{x}_{i}} Dist(\mathbf{y}\mathbf{A}, \mathbf{x}_{i}\mathbf{A})^{2},\ s.t.\ \mathbf{A^{T}A} = \mathbf{I}\text{, with }Dist\text{ being Euclidean distance. The problem can}\\ 
+&\text{be solved by eigen-decomposing the matrix }\mathbf{P^T P} \text{, where each row of }\mathbf{P}\text{ is }\mathbf{P_i} = \mathbf{y} - \mathbf{x_i}.\\ 
+&\text{Since }\mathbf{P^T P}\text{ is a D*D matrix, the eigen decomposition can be finished in }O(D^3) \text{ time.}\\ 
+&\text{For maximization problem, we choose eigen vectors with the largest eigen values to construct }\mathbf{A}\text{, while we use those with the smallest}\\ 
+&\text{eigen values to solve a minimization problem}.
+\end{align*}
+\end{document}

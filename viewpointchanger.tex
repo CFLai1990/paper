@@ -1,5 +1,7 @@
-\documentclass{vgtc}                          % final (conference style)
-%\documentclass[review]{vgtc}                 % review
+% $Id: template.tex 11 2007-04-03 22:25:53Z jpeltier $
+
+%\documentclass{vgtc}                          % final (conference style)
+\documentclass[review]{vgtc}                 % review
 %\documentclass[widereview]{vgtc}             % wide-spaced review
 %\documentclass[preprint]{vgtc}               % preprint
 %\documentclass[electronic]{vgtc}             % electronic version
@@ -39,11 +41,20 @@
 %% throughout the proceedings. However, if you encounter conflicts
 %% with other math-related packages, you may want to disable it.
 
+%% If you are submitting a paper to a conference for review with a double
+%% blind reviewing process, please replace the value ``0'' below with your
+%% OnlineID. Otherwise, you may safely leave it at ``0''.
+\onlineid{2277}
+
+%% We encourage the use of mathptmx for consistent usage of times font
+%% throughout the proceedings. However, if you encounter conflicts
+%% with other math-related packages, you may want to disable it.
+
 %% This turns references into clickable hyperlinks.
 %% If you are submitting a paper to a conference for review with a double
 %% blind reviewing process, please replace the value ``0'' below with your
 %% OnlineID. Otherwise, you may safely leave it at ``0''.
-\onlineid{234}
+\onlineid{2277}
 \newcommand{\note}[1]{\iffalse #1 \fi}
 \newcommand{\col}[1]{{\color{blue}{#1}}}
 \note{
@@ -123,8 +134,10 @@
   }
   \teaser{
  \centering
- \includegraphics[width=1\linewidth]{images/teaser.eps}
-  \caption{An overview of our prototype system called FocusChanger. (a) \textbf{Projection View} allows users to choose the POI data, and returns a locally enhanced projection accordingly. (b) \textbf{Information Panel} shows details about the POI and its featured projection, such as data size, dimension weights, etc. (c) \textbf{Control Panel} provides different options for choosing POIs and enhancing the projection. (d) \textbf{Focus List} is where users store the POIs they found valuable for further analysis. (e) \textbf{Projection Map} shows featured projections of all POIs in the Focus List. Each projection is shown as a glyph while the in-between distance denotes dissimilarity.}
+ \includegraphics[width=0.9\linewidth]{images/new_pipeline1.eps}
+  \caption{We propose an interactive and exploratory scheme for local analysis in high-dimensional data. (a) We first present a global projection as the overview. (b) Then suggestions are made to help user find an interesting piece of local data. (c) User chooses some local data as the focus, and named a feature to be analyzed. (d) We make linear projections to enhance local features of the chosen data. Different features are defined for different analytic tasks. (e) A feature-related subspace is also revealed to support dimensional analysis. From the resulting projection and subspace, users can gain both structural and dimensional insights about the data focus. (f) Finally, the user can move on to a new focus, and store valuable findings in Focus List for further study. Projection Map is provided to help compare multiple focuses in the list based on their features.
+}
+  \label{fig:workflow}
   }
 
 %% Uncomment below to disable the manuscript note
